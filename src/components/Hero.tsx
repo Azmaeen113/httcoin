@@ -1,0 +1,180 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Download } from "lucide-react";
+import Countdown from "./Countdown";
+import ColourfulText from "@/components/ui/colourful-text";
+import solanaPhantomImage from "@/assets/gallery/qatar/Solana phantom.jpg";
+
+const floatingDestinations = [
+  { delay: 0, size: 80, x: "10%", y: "20%", color: "from-cyan-400/70 to-blue-500/30" },
+  { delay: 1, size: 60, x: "75%", y: "30%", color: "from-purple-400/60 to-indigo-500/30" },
+  { delay: 2.5, size: 50, x: "20%", y: "70%", color: "from-emerald-400/60 to-teal-500/30" },
+  { delay: 3.5, size: 40, x: "65%", y: "70%", color: "from-orange-400/60 to-pink-500/30" },
+];
+
+const Hero = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const parallax = useTransform(scrollYProgress, [0, 1], [0, -140]);
+  const glowParallax = useTransform(scrollYProgress, [0, 1], [0, 80]);
+
+  return (
+    <section ref={heroRef} className="relative h-screen flex items-center overflow-hidden -mt-20 lg:-mt-24 pt-20 lg:pt-24">
+      <div className="hero-mesh" />
+      <div className="hero-aurora" />
+      <div className="hero-stars" />
+
+      {/* Parallax Glow Layers */}
+      <motion.div
+        style={{ translateY: parallax }}
+        className="absolute inset-0 bg-[radial-gradient(circle_at_top,hsla(200,100%,80%,0.25),transparent_50%)]"
+      />
+      <motion.div
+        style={{ translateY: glowParallax }}
+        className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[60vw] h-[60vw] rounded-full blur-[120px] bg-gradient-to-r from-cyan-500/20 via-blue-600/30 to-purple-500/20"
+      />
+
+      {/* Floating particles */}
+      {floatingDestinations.map((particle, idx) => (
+        <motion.div
+          key={idx}
+          className={`absolute rounded-full bg-gradient-to-br ${particle.color} blur-sm`}
+          style={{
+            width: particle.size,
+            height: particle.size,
+            left: particle.x,
+            top: particle.y,
+          }}
+          animate={{
+            y: [0, -20, 0],
+            x: [0, 15, 0],
+            opacity: [0.3, 0.7, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            delay: particle.delay,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8 text-center lg:text-left">
+            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+              <span className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs uppercase tracking-[0.35em]">
+                Travel rewards reimagined
+              </span>
+              <h1 className="mt-6 text-4xl md:text-5xl xl:text-6xl font-bold leading-tight gradient-text">
+                Unlock borderless travel rewards with <ColourfulText text="HTTCoin" />
+              </h1>
+              <p className="mt-6 text-base md:text-lg text-muted-foreground/90 max-w-2xl">
+                Earn luminous cashback, book with instant settlement, and travel through a universe of premium partners—all
+                powered by Solana speed and deflationary tokenomics.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35 }}
+            >
+              <Button size="lg" className="cta-button text-primary-foreground shadow-lg hover:scale-[1.02] transition">
+                Buy HTTCoin
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white/30 bg-white/5 text-foreground hover:bg-white/10 hover:text-foreground"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Whitepaper
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+              className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left glass-panel rounded-2xl px-4 py-3"
+            >
+              {[
+                { label: "Travel Cashback", value: "4%", accent: "text-cyan-300" },
+                { label: "Total Supply", value: "1B", accent: "text-indigo-300" },
+                { label: "Partners by 2027", value: "1000+", accent: "text-emerald-300" },
+                { label: "Pre-launch Burn", value: "10%", accent: "text-orange-300" },
+              ].map((item) => (
+                <div key={item.label}>
+                  <p className={`text-xl font-bold ${item.accent}`}>{item.value}</p>
+                  <p className="text-xs text-muted-foreground">{item.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            className="relative flex items-center justify-center"
+          >
+            <motion.div
+              className="relative z-10 w-[426px] h-[426px] rounded-[40px] overflow-hidden"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              style={{
+                boxShadow: "0 0 20px rgba(0,240,255,0.3)",
+              }}
+            >
+              {/* Background image - full sized */}
+              <div 
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
+                style={{ 
+                  backgroundImage: `url(${solanaPhantomImage})`,
+                }}
+              />
+              
+              {/* Content overlay */}
+              <div className="absolute inset-0 p-3 flex flex-col z-10">
+                <div className="flex items-center justify-between text-[8px] uppercase tracking-[0.25em] text-white drop-shadow-lg">
+                  <span>Launch</span>
+                  <span>Dec 1 · 2025</span>
+                </div>
+                <div className="flex-1" />
+                <div className="scale-[0.8] origin-bottom">
+                  <Countdown />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mt-12 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.35em]"
+        >
+          {["Liquidity Locked", "Audit Ready", "Qatar Airways Partner", "Powered by Solana"].map((badge) => (
+            <span
+              key={badge}
+              className="rounded-full border border-white/15 bg-white/5 px-6 py-2 text-muted-foreground hover:border-white/40 transition"
+            >
+              {badge}
+            </span>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

@@ -1,0 +1,502 @@
+[
+  {
+    "file": "gallery/all/1.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Now Live",
+    "caption": "a cartoon owl with big eyes sitting on a blue background",
+    "similarity": 0.1956
+  },
+  {
+    "file": "gallery/all/10.JPG",
+    "name": "Singapore",
+    "region": "Asia",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q3 2025",
+    "caption": "a cartoon character is standing next to a bird",
+    "similarity": 0.1975
+  },
+  {
+    "file": "gallery/all/11.JPG",
+    "name": "Lima, Peru",
+    "region": "Americas",
+    "category": "Historic Sites",
+    "status": "In Negotiation",
+    "launchDate": "Q1 2026",
+    "caption": "a bird sitting on a rock with a rainbow in the background",
+    "similarity": 0.2424
+  },
+  {
+    "file": "gallery/all/12.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q4 2026",
+    "caption": "two birds are dancing on a dance floor",
+    "similarity": 0.2053
+  },
+  {
+    "file": "gallery/all/13.JPG",
+    "name": "Paris, France",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q1 2025",
+    "caption": "the angry birds movie poster",
+    "similarity": 0.2244
+  },
+  {
+    "file": "gallery/all/14.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q4 2025",
+    "caption": "the angry birds",
+    "similarity": 0.2527
+  },
+  {
+    "file": "gallery/all/15.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q2 2026",
+    "caption": "a bird sitting on a window ledge looking out at a city",
+    "similarity": 0.2327
+  },
+  {
+    "file": "gallery/all/16.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "2027",
+    "caption": "a toy of an eagle with a hollywood sign in the background",
+    "similarity": 0.2881
+  },
+  {
+    "file": "gallery/all/17.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q2 2025",
+    "caption": "a stuffed bird sitting on a bed with money",
+    "similarity": 0.2142
+  },
+  {
+    "file": "gallery/all/18.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Dec 1, 2025",
+    "caption": "a cartoon owl sitting on a desk with a laptop",
+    "similarity": 0.2143
+  },
+  {
+    "file": "gallery/all/19.JPG",
+    "name": "Barcelona, Spain",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q3 2026",
+    "caption": "a bird is sitting on a street corner",
+    "similarity": 0.2617
+  },
+  {
+    "file": "gallery/all/2.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Now Live",
+    "caption": "a cute owl with blue eyes and wings",
+    "similarity": 0.1976
+  },
+  {
+    "file": "gallery/all/20.JPG",
+    "name": "Vienna, Austria",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q3 2025",
+    "caption": "a bird sitting on a brick near a river",
+    "similarity": 0.2521
+  },
+  {
+    "file": "gallery/all/21.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q1 2026",
+    "caption": "a stuffed bird sitting on a wooden bench",
+    "similarity": 0.2464
+  },
+  {
+    "file": "gallery/all/22.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q4 2026",
+    "caption": "two stuffed animals sitting on a beach towel",
+    "similarity": 0.2196
+  },
+  {
+    "file": "gallery/all/23.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q1 2025",
+    "caption": "the secret in the secret in the secret in the secret in the secret in the secret in the secret in the secret in the secret in the",
+    "similarity": 0.2313
+  },
+  {
+    "file": "gallery/all/24.JPG",
+    "name": "Sahara Desert",
+    "region": "Africa",
+    "category": "Adventures",
+    "status": "Coming Soon",
+    "launchDate": "Q4 2025",
+    "caption": "a camel with a helmet on its head",
+    "similarity": 0.2844
+  },
+  {
+    "file": "gallery/all/25.JPG",
+    "name": "Rome, Italy",
+    "region": "Europe",
+    "category": "Historic Sites",
+    "status": "In Negotiation",
+    "launchDate": "Q2 2026",
+    "caption": "a man in a gondol on a canal",
+    "similarity": 0.2457
+  },
+  {
+    "file": "gallery/all/26.JPG",
+    "name": "Barcelona, Spain",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "2027",
+    "caption": "a stadium full of fans",
+    "similarity": 0.1936
+  },
+  {
+    "file": "gallery/all/27.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q2 2025",
+    "caption": "a bird in a baseball hat and a baseball glove is surrounded by a crowd",
+    "similarity": 0.2041
+  },
+  {
+    "file": "gallery/all/28.JPG",
+    "name": "Dubai, UAE",
+    "region": "Middle East",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Dec 1, 2025",
+    "caption": "a bird wearing sunglasses",
+    "similarity": 0.2823
+  },
+  {
+    "file": "gallery/all/29.JPG",
+    "name": "Cairo, Egypt",
+    "region": "Africa",
+    "category": "Historic Sites",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q3 2026",
+    "caption": "a bird wearing sunglasses and a t - shirt",
+    "similarity": 0.2673
+  },
+  {
+    "file": "gallery/all/3.jpg",
+    "name": "Sydney, Australia",
+    "region": "Oceania",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Now Live",
+    "caption": "an owl sitting on an airplane with a cup of coffee",
+    "similarity": 0.2101
+  },
+  {
+    "file": "gallery/all/30.JPG",
+    "name": "Rome, Italy",
+    "region": "Europe",
+    "category": "Historic Sites",
+    "status": "In Negotiation",
+    "launchDate": "Q3 2025",
+    "caption": "an eagle sitting on a suitcase in front of the aci",
+    "similarity": 0.2344
+  },
+  {
+    "file": "gallery/all/31.JPG",
+    "name": "Tokyo, Japan",
+    "region": "Asia",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q1 2026",
+    "caption": "a bird sitting on a train platform next to a mountain",
+    "similarity": 0.2377
+  },
+  {
+    "file": "gallery/all/32.JPG",
+    "name": "Seoul, South Korea",
+    "region": "Asia",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q4 2026",
+    "caption": "a stuffed owl with a chain around its neck",
+    "similarity": 0.2254
+  },
+  {
+    "file": "gallery/all/33.JPG",
+    "name": "Bali, Indonesia",
+    "region": "Asia",
+    "category": "Beaches",
+    "status": "In Negotiation",
+    "launchDate": "Q1 2025",
+    "caption": "a cartoon character with a hat and a hat on his head, standing in the jungle",
+    "similarity": 0.1982
+  },
+  {
+    "file": "gallery/all/34.JPG",
+    "name": "Singapore",
+    "region": "Asia",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q4 2025",
+    "caption": "a cat in a boat with a lot of money",
+    "similarity": 0.2039
+  },
+  {
+    "file": "gallery/all/35.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q2 2026",
+    "caption": "the secrets of the secrets",
+    "similarity": 0.2429
+  },
+  {
+    "file": "gallery/all/36.JPG",
+    "name": "Maldives",
+    "region": "Asia",
+    "category": "Beaches",
+    "status": "In Negotiation",
+    "launchDate": "2027",
+    "caption": "two blue birds kissing on a boat with hearts floating in the air",
+    "similarity": 0.2175
+  },
+  {
+    "file": "gallery/all/37.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q2 2025",
+    "caption": "the angry bird is flying over a city",
+    "similarity": 0.2587
+  },
+  {
+    "file": "gallery/all/38.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Dec 1, 2025",
+    "caption": "a cartoon bird sitting on a bar counter",
+    "similarity": 0.2002
+  },
+  {
+    "file": "gallery/all/39.JPG",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q3 2026",
+    "caption": "a bird is sitting on an airplane window",
+    "similarity": 0.2392
+  },
+  {
+    "file": "gallery/all/4.JPG",
+    "name": "Paris, France",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Now Live",
+    "caption": "a cartoon bird flying over a city",
+    "similarity": 0.267
+  },
+  {
+    "file": "gallery/all/40.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q3 2025",
+    "caption": "a cartoon character is talking to a fox",
+    "similarity": 0.2042
+  },
+  {
+    "file": "gallery/all/41.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q1 2026",
+    "caption": "a cartoon bird with a suitcase and a ticket",
+    "similarity": 0.2305
+  },
+  {
+    "file": "gallery/all/42.jpeg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q4 2026",
+    "caption": "a football player in a blue uniform running with a gold coin",
+    "similarity": 0.174
+  },
+  {
+    "file": "gallery/all/43.jpeg",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q1 2025",
+    "caption": "a cartoon bird sitting at a desk with a laptop",
+    "similarity": 0.2002
+  },
+  {
+    "file": "gallery/all/5.jpeg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q4 2025",
+    "caption": "mickey, donald, and friends in the disney world",
+    "similarity": 0.2181
+  },
+  {
+    "file": "gallery/all/6.jpeg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q2 2026",
+    "caption": "legoland at disney world",
+    "similarity": 0.2284
+  },
+  {
+    "file": "gallery/all/7.jpeg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "2027",
+    "caption": "the angry bird is standing in front of a jurassic park sign",
+    "similarity": 0.2237
+  },
+  {
+    "file": "gallery/all/8.JPG",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q2 2025",
+    "caption": "a cartoon bird with a suitcase in an airport",
+    "similarity": 0.22
+  },
+  {
+    "file": "gallery/all/9.JPG",
+    "name": "Zurich, Switzerland",
+    "region": "Europe",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Dec 1, 2025",
+    "caption": "a bird eating food in a restaurant",
+    "similarity": 0.22
+  },
+  {
+    "file": "gallery/qatar/6A4620BF-B43E-4CF4-A192-0244B53A3F0A.jpeg",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q3 2026",
+    "caption": "a christmas owl in a santa hat surrounded by people",
+    "similarity": 0.2047
+  },
+  {
+    "file": "gallery/qatar/Bilbord1.jpg",
+    "name": "Cape Town, South Africa",
+    "region": "Africa",
+    "category": "Adventures",
+    "status": "In Negotiation",
+    "launchDate": "Now Live",
+    "caption": "a large billboard with an eagle on it",
+    "similarity": 0.206
+  },
+  {
+    "file": "gallery/qatar/qatar 2.png",
+    "name": "Doha, Qatar",
+    "region": "Middle East",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q3 2025",
+    "caption": "qatar a387 a387 a387 a38 a387 a387 a387 a387 a387 a",
+    "similarity": 0.2273
+  },
+  {
+    "file": "gallery/qatar/qatar 3.jpeg",
+    "name": "New York City, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q1 2026",
+    "caption": "a large billboard with a picture of a bird on it",
+    "similarity": 0.2132
+  },
+  {
+    "file": "gallery/qatar/qatar.jpeg",
+    "name": "Doha, Qatar",
+    "region": "Middle East",
+    "category": "Cities",
+    "status": "In Negotiation",
+    "launchDate": "Q4 2026",
+    "caption": "a large white plane",
+    "similarity": 0.224
+  },
+  {
+    "file": "gallery/qatar/Solana phantom.jpg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "HTTCoin Accepted",
+    "launchDate": "Q1 2025",
+    "caption": "a cartoon bird with a coin flying out of its beak",
+    "similarity": 0.1843
+  },
+  {
+    "file": "gallery/qatar/token pic.jpeg",
+    "name": "Los Angeles, USA",
+    "region": "Americas",
+    "category": "Cities",
+    "status": "Coming Soon",
+    "launchDate": "Q4 2025",
+    "caption": "an owl with a gold coin and a blue jacket",
+    "similarity": 0.196
+  }
+]
