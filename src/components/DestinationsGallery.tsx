@@ -73,27 +73,7 @@ const DestinationsGallery = () => {
           </p>
         </motion.div>
 
-        {/* Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
-          {destinationCategories.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeFilter === filter
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/50"
-                  : "bg-card text-muted-foreground hover:bg-card/80 border border-border"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </motion.div>
+        {/* Category filters removed per request – keeping underlying data logic so future re-enable is easy */}
 
         {/* Gallery Slideshow */}
         <div 

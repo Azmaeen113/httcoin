@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Share2, Download } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
+import { GlareCard } from "@/components/ui/glare-card";
+import img34 from "@/assets/gallery/all/34.JPG";
+import stadiumOwl from "@/assets/stadium-owl.jpg";
 
 const toc = [
   "Executive Summary",
@@ -29,7 +32,7 @@ const quickSummary = [
 const WhitepaperPage = () => {
   return (
     <div className="bg-background">
-      <section className="relative py-24 px-4 overflow-hidden text-center space-y-4 -mt-20 lg:-mt-24 pt-32 lg:pt-36">
+      <section className="relative py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-32 lg:pt-36">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-600/40 via-background to-zinc-600/30" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(148,163,184,0.25),transparent_60%)]" />
@@ -64,21 +67,33 @@ const WhitepaperPage = () => {
           }}
         />
         
-        <div className="max-w-3xl mx-auto relative z-10 space-y-4">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary">Whitepaper v1.0 · Last updated Nov 2025</p>
-        <h1 className="text-4xl md:text-6xl font-bold"><ColourfulText text="HTTCoin" /> Whitepaper</h1>
-        <p className="text-muted-foreground max-w-3xl mx-auto">
-          Explore the technical documentation, token economics, and long-term vision driving HTTCoin&apos;s travel-focused
-          ecosystem.
-        </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          {["PDF (English)", "PDF (Spanish)", "PDF (Chinese)", "PDF (French)"].map((label) => (
-            <Button key={label} className="flex items-center gap-2">
-              <Download className="w-4 h-4" />
-              {label}
-            </Button>
-          ))}
-        </div>
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary">Whitepaper v1.0 · Last updated Nov 2025</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"><ColourfulText text="HTTCoin" /> Whitepaper</h1>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              Explore the technical documentation, token economics, and long-term vision driving HTTCoin&apos;s travel-focused ecosystem.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap justify-center md:justify-start">
+              {["PDF (English)", "PDF (Spanish)", "PDF (Chinese)", "PDF (French)"].map((label) => (
+                <Button key={label} className="flex items-center gap-2 w-full sm:w-auto">
+                  <Download className="w-4 h-4" />
+                  {label}
+                </Button>
+              ))}
+            </div>
+          </div>
+          <div className="relative mt-8 md:mt-0">
+            <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">
+              <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px]">
+                <img
+                  src={img34}
+                  alt="HTTCoin Whitepaper"
+                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                />
+              </div>
+            </GlareCard>
+          </div>
         </div>
       </section>
 
@@ -90,8 +105,22 @@ const WhitepaperPage = () => {
               Fullscreen
             </Button>
           </div>
-          <div className="h-[600px] bg-muted flex items-center justify-center text-muted-foreground text-sm">
-            PDF viewer coming soon
+          <div className="h-[600px] bg-muted relative overflow-hidden rounded-b-3xl">
+            {/* Temporary visual placeholder with image until PDF embed is ready */}
+            <img
+              src={stadiumOwl}
+              alt="HTTCoin whitepaper viewer placeholder"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="relative z-10 h-full flex flex-col items-center justify-center gap-4 px-6 text-center">
+              <p className="text-white text-xl md:text-2xl font-semibold drop-shadow">
+                Embedded PDF Viewer Coming Soon
+              </p>
+              <p className="text-white/80 max-w-md text-sm md:text-base">
+                For now, use the download buttons above to access the whitepaper in your preferred language.
+              </p>
+            </div>
           </div>
         </div>
         <div className="border border-border rounded-3xl p-6 space-y-6">

@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ColourfulText from "@/components/ui/colourful-text";
 import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
+import { GlareCard } from "@/components/ui/glare-card";
+import debitCardBack from "@/assets/debit-card-back.jpeg";
 
 const articles = [
   {
@@ -92,15 +94,15 @@ const BlogPage = () => {
 
   return (
     <div className="bg-background">
-      <section className="relative py-24 px-4 overflow-hidden text-center space-y-6 -mt-20 lg:-mt-24 pt-32 lg:pt-36">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-600/40 via-background to-fuchsia-600/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_40%,rgba(139,92,246,0.25),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_60%,rgba(217,70,239,0.25),transparent_60%)]" />
+      <section className="relative py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-32 lg:pt-36">
+        {/* Animated gradient background - swapped from destination page */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/40 via-background to-teal-600/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(16,185,129,0.25),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_70%,rgba(20,184,166,0.25),transparent_60%)]" />
         
         {/* Floating particles */}
         <motion.div
-          className="absolute top-[18%] left-[8%] w-36 h-36 rounded-full bg-gradient-to-br from-violet-400/50 to-fuchsia-500/20 blur-2xl"
+          className="absolute top-[18%] left-[8%] w-36 h-36 rounded-full bg-gradient-to-br from-emerald-400/50 to-teal-500/20 blur-2xl"
           animate={{
             y: [0, -28, 0],
             x: [0, 22, 0],
@@ -113,7 +115,7 @@ const BlogPage = () => {
           }}
         />
         <motion.div
-          className="absolute top-[58%] right-[12%] w-42 h-42 rounded-full bg-gradient-to-br from-fuchsia-400/40 to-violet-500/20 blur-2xl"
+          className="absolute top-[58%] right-[12%] w-42 h-42 rounded-full bg-gradient-to-br from-teal-400/40 to-emerald-500/20 blur-2xl"
           animate={{
             y: [0, 32, 0],
             x: [0, -17, 0],
@@ -127,20 +129,33 @@ const BlogPage = () => {
           }}
         />
         
-        <div className="max-w-2xl mx-auto relative z-10 space-y-6">
-        <p className="text-sm uppercase tracking-[0.3em] text-primary"><ColourfulText text="HTTCoin" /> Newsroom</p>
-        <h1 className="text-4xl md:text-6xl font-bold">Latest from <ColourfulText text="HTTCoin" /></h1>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Updates, travel inspiration, and crypto education for explorers building the future of borderless travel.
-        </p>
-        <div className="max-w-xl mx-auto">
-          <Input
-            placeholder="Search articles..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="h-14 text-lg"
-          />
-        </div>
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary"><ColourfulText text="HTTCoin" /> Newsroom</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Latest from <ColourfulText text="HTTCoin" /></h1>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              Updates, travel inspiration, and crypto education for explorers building the future of borderless travel.
+            </p>
+            <div className="max-w-xl">
+              <Input
+                placeholder="Search articles..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="h-12 md:h-14 text-base md:text-lg"
+              />
+            </div>
+          </div>
+          <div className="relative mt-8 md:mt-0">
+            <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">
+              <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px]">
+                <img
+                  src={debitCardBack}
+                  alt="HTTCoin Blog"
+                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                />
+              </div>
+            </GlareCard>
+          </div>
         </div>
       </section>
 

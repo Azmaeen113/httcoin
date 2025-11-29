@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Flame, ShieldCheck } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
 import { useTranslation } from "react-i18next";
+import { GlareCard } from "@/components/ui/glare-card";
+import img43 from "@/assets/gallery/all/43.jpeg";
 
 const TokenomicsPage = () => {
   const { t } = useTranslation();
@@ -84,17 +86,30 @@ const TokenomicsPage = () => {
           }}
         />
         
-        <div className="max-w-6xl mx-auto relative z-10 text-center space-y-4 md:space-y-6">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary">{t("tokenomicsPage.badge")}</p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"><ColourfulText text="HTTCoin" /> {t("tokenomics.titleNoBrand")}</h1>
-          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
-            {t("tokenomicsPage.subtitle")}
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-            <Button size="lg" className="w-full sm:w-auto">{t("tokenomicsPage.downloadDeck")}</Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">
-              {t("tokenomicsPage.viewSolscan")}
-            </Button>
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary">{t("tokenomicsPage.badge")}</p>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"><ColourfulText text="HTTCoin" /> {t("tokenomics.titleNoBrand")}</h1>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              {t("tokenomicsPage.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
+              <Button size="lg" className="w-full sm:w-auto">{t("tokenomicsPage.downloadDeck")}</Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                {t("tokenomicsPage.viewSolscan")}
+              </Button>
+            </div>
+          </div>
+          <div className="relative mt-8 md:mt-0">
+            <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">
+              <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px]">
+                <img
+                  src={img43}
+                  alt="HTTCoin Tokenomics"
+                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                />
+              </div>
+            </GlareCard>
           </div>
         </div>
       </section>

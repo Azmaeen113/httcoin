@@ -77,23 +77,32 @@ const DebitCardPage = () => {
   const { t } = useTranslation();
   const slideshowImages = [img39, img40];
   const [activeIdx, setActiveIdx] = useState(0);
-  const [waitlistName, setWaitlistName] = useState("");
-  const [waitlistEmail, setWaitlistEmail] = useState("");
-  const [waitlistCountry, setWaitlistCountry] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [hasInterest, setHasInterest] = useState(false);
 
   const handleWaitlistSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = "HTTCoin Debit Card Waitlist Registration";
+    const subject = "HTTCoin Debit Card Registration - Q3 Launch";
     const body = createFormEmailBody({
-      "Name": waitlistName,
-      "Email": waitlistEmail,
-      "Country": waitlistCountry,
-      "Page": "Debit Card Waitlist"
+      "First Name": firstName,
+      "Last Name": lastName,
+      "Email": email,
+      "Phone": phone,
+      "Address": address,
+      "Interested in Debit Card": hasInterest ? "Yes" : "No",
+      "Page": "Debit Card Q3 Launch"
     });
     window.location.href = createEmailLink(subject, body);
-    setWaitlistName("");
-    setWaitlistEmail("");
-    setWaitlistCountry("");
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setAddress("");
+    setHasInterest(false);
   };
 
   // Simple crossfade every 4s
@@ -141,7 +150,7 @@ const DebitCardPage = () => {
         
         <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-4 md:space-y-6 text-center md:text-left">
-            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary">{t("debit.coming")}</p>
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-primary">Coming Q3 2026</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">{t("debit.titleStart")} <ColourfulText text="HTTCoin" /> {t("debit.titleEnd")}</h1>
             <p className="text-muted-foreground text-base sm:text-lg">{t("debit.subtitle")}</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center md:justify-start">
@@ -266,36 +275,86 @@ const DebitCardPage = () => {
       </section>
 
       <section className="bg-card/60 border-t border-border py-12 md:py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
-          <Shield className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto" />
-          <h2 className="text-2xl sm:text-3xl font-bold">{t("debit.waitlist.title")}</h2>
-          <p className="text-sm sm:text-base text-muted-foreground">{t("debit.waitlist.desc")}</p>
-          <form onSubmit={handleWaitlistSubmit} className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
-            <Input 
-              placeholder={t("debit.waitlist.name") || "Name"} 
-              className="w-full"
-              value={waitlistName}
-              onChange={(e) => setWaitlistName(e.target.value)}
-              required
-            />
-            <Input 
-              type="email"
-              placeholder={t("debit.waitlist.email") || "Email"} 
-              className="w-full"
-              value={waitlistEmail}
-              onChange={(e) => setWaitlistEmail(e.target.value)}
-              required
-            />
-            <Input 
-              placeholder={t("debit.waitlist.country") || "Country"} 
-              className="w-full"
-              value={waitlistCountry}
-              onChange={(e) => setWaitlistCountry(e.target.value)}
-              required
-            />
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-6">
+          <div className="text-center space-y-4">
+            <Shield className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto" />
+            <h2 className="text-2xl sm:text-3xl font-bold">Register for HTTCoin Debit Card</h2>
+            <p className="text-sm sm:text-base text-muted-foreground">
+              Join the waitlist for Q3 2026 launch. Reserve your card and unlock exclusive travel rewards.
+            </p>
+            <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base font-semibold text-primary">
+                💎 Minimum requirement: Hold $250 worth of HTTC tokens to qualify for your debit card
+              </p>
+            </div>
+          </div>
+          <form onSubmit={handleWaitlistSubmit} className="space-y-4 max-w-2xl mx-auto bg-background border border-border rounded-2xl p-6 md:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="text-xs sm:text-sm font-medium mb-2 block">First Name *</label>
+                <Input 
+                  placeholder="John" 
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
+                <label className="text-xs sm:text-sm font-medium mb-2 block">Last Name *</label>
+                <Input 
+                  placeholder="Doe" 
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label className="text-xs sm:text-sm font-medium mb-2 block">Email *</label>
+              <Input 
+                type="email"
+                placeholder="john.doe@example.com" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label className="text-xs sm:text-sm font-medium mb-2 block">Phone Number *</label>
+              <Input 
+                type="tel"
+                placeholder="+1 (555) 123-4567" 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label className="text-xs sm:text-sm font-medium mb-2 block">Address *</label>
+              <Input 
+                placeholder="123 Main St, City, Country" 
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              />
+            </div>
+            <div className="flex items-start gap-3 pt-2">
+              <input 
+                type="checkbox"
+                checked={hasInterest}
+                onChange={(e) => setHasInterest(e.target.checked)}
+                className="mt-1 w-4 h-4 rounded border-border"
+                required
+              />
+              <label className="text-xs sm:text-sm text-muted-foreground">
+                I am interested in receiving the HTTCoin Debit Card and confirm I understand the minimum requirement of holding $250 worth of HTTC tokens. *
+              </label>
+            </div>
+            <Button type="submit" size="lg" className="w-full">Submit Registration</Button>
+            <p className="text-xs text-center text-muted-foreground">
+              Already {(12734).toLocaleString()} travelers registered. Secure your spot today!
+            </p>
           </form>
-          <Button type="submit" size="lg" className="w-full sm:w-auto" onClick={handleWaitlistSubmit}>{t("debit.joinWaitlist")}</Button>
-          <p className="text-xs text-muted-foreground">{t("debit.waitlist.current", { count: 12734 })}</p>
         </div>
       </section>
 

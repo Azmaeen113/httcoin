@@ -13,6 +13,8 @@ import AppleCardsCarouselDemo from "@/components/apple-cards-carousel-demo";
 import ColourfulText from "@/components/ui/colourful-text";
 import { useTranslation } from "react-i18next";
 import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
+import { GlareCard } from "@/components/ui/glare-card";
+import airplaneOwl from "@/assets/airplane-owl.jpg";
 
 const mapPositions = [
   { top: "20%", left: "30%" },
@@ -101,14 +103,14 @@ const DestinationsPage = () => {
     <div className="bg-background">
   {/* Hero */}
       <section className="relative overflow-hidden py-16 md:py-24 px-4 -mt-20 lg:-mt-24 pt-24 sm:pt-28 lg:pt-36">
-        {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600/40 via-background to-amber-600/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(251,146,60,0.25),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_60%_70%,rgba(245,158,11,0.25),transparent_60%)]" />
+        {/* Animated gradient background - swapped from blog page */}
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-600/40 via-background to-fuchsia-600/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_40%,rgba(139,92,246,0.25),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_60%,rgba(217,70,239,0.25),transparent_60%)]" />
         
         {/* Floating particles */}
         <motion.div
-          className="absolute top-[22%] left-[14%] w-24 h-24 sm:w-38 sm:h-38 rounded-full bg-gradient-to-br from-orange-400/50 to-amber-500/20 blur-2xl"
+          className="absolute top-[22%] left-[14%] w-24 h-24 sm:w-38 sm:h-38 rounded-full bg-gradient-to-br from-violet-400/50 to-fuchsia-500/20 blur-2xl"
           animate={{
             y: [0, -26, 0],
             x: [0, 19, 0],
@@ -121,7 +123,7 @@ const DestinationsPage = () => {
           }}
         />
         <motion.div
-          className="absolute top-[62%] right-[16%] w-32 h-32 sm:w-46 sm:h-46 rounded-full bg-gradient-to-br from-amber-400/40 to-orange-500/20 blur-2xl"
+          className="absolute top-[62%] right-[16%] w-32 h-32 sm:w-46 sm:h-46 rounded-full bg-gradient-to-br from-fuchsia-400/40 to-violet-500/20 blur-2xl"
           animate={{
             y: [0, 28, 0],
             x: [0, -21, 0],
@@ -135,25 +137,38 @@ const DestinationsPage = () => {
           }}
         />
         
-        <div className="max-w-6xl mx-auto relative z-10 space-y-6 md:space-y-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.3em]">
-            <Compass className="w-3 h-3 md:w-4 md:h-4" />
-            {t("destinations.badge")}
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"><ColourfulText text="HTTCoin" /> {t("destinations.titleSuffix")}</h1>
-          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
-            {t("destinations.subtitle")}
-          </p>
-          <div className="max-w-xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 md:w-5 md:h-5" />
-              <Input
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder={t("destinations.searchPlaceholder")}
-                className="pl-10 md:pl-12 pr-4 py-5 md:py-6 text-base md:text-lg rounded-full bg-card/80"
-              />
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-2 bg-primary/10 text-primary rounded-full text-xs uppercase tracking-[0.3em]">
+              <Compass className="w-3 h-3 md:w-4 md:h-4" />
+              {t("destinations.badge")}
             </div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"><ColourfulText text="HTTCoin" /> {t("destinations.titleSuffix")}</h1>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              {t("destinations.subtitle")}
+            </p>
+            <div className="max-w-xl">
+              <div className="relative">
+                <Search className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4 md:w-5 md:h-5" />
+                <Input
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder={t("destinations.searchPlaceholder")}
+                  className="pl-10 md:pl-12 pr-4 py-5 md:py-6 text-base md:text-lg rounded-full bg-card/80"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="relative mt-8 md:mt-0">
+            <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">
+              <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px]">
+                <img
+                  src={airplaneOwl}
+                  alt="HTTCoin Destinations"
+                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                />
+              </div>
+            </GlareCard>
           </div>
         </div>
       </section>

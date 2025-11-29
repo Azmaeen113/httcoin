@@ -5,6 +5,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wallet, Shield, Video, Download } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
+import { GlareCard } from "@/components/ui/glare-card";
+import img18 from "@/assets/gallery/all/18.JPG";
 
 const prerequisites = [
   "Solana wallet (Phantom recommended)",
@@ -88,7 +90,7 @@ const officialLinks = [
 const HowToBuyPage = () => {
   return (
     <div className="bg-background">
-      <section className="relative py-16 md:py-24 px-4 overflow-hidden text-center space-y-4 md:space-y-6 -mt-20 lg:-mt-24 pt-24 sm:pt-28 lg:pt-36">
+      <section className="relative py-16 md:py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-24 sm:pt-28 lg:pt-36">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 via-background to-sky-600/30" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_25%,rgba(59,130,246,0.25),transparent_60%)]" />
@@ -123,17 +125,30 @@ const HowToBuyPage = () => {
           }}
         />
         
-        <div className="max-w-3xl mx-auto relative z-10 space-y-4 md:space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">How to Buy <ColourfulText text="HTTCoin" /></h1>
-        <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
-          Follow this step-by-step guide to join the HTTC ecosystem safely and confidently.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 flex-wrap">
-          <Button size="lg" className="w-full sm:w-auto">Watch Tutorial</Button>
-          <Button size="lg" variant="outline" className="w-full sm:w-auto">
-            Download PDF Guide
-          </Button>
-        </div>
+        <div className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4 md:space-y-6 text-center md:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">How to Buy <ColourfulText text="HTTCoin" /></h1>
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+              Follow this step-by-step guide to join the HTTC ecosystem safely and confidently.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap justify-center md:justify-start">
+              <Button size="lg" className="w-full sm:w-auto">Watch Tutorial</Button>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                Download PDF Guide
+              </Button>
+            </div>
+          </div>
+          <div className="relative mt-8 md:mt-0">
+            <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">
+              <div className="relative w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px]">
+                <img
+                  src={img18}
+                  alt="HTTCoin How to Buy"
+                  className="w-full h-full object-cover rounded-2xl md:rounded-3xl"
+                />
+              </div>
+            </GlareCard>
+          </div>
         </div>
       </section>
 

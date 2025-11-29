@@ -176,8 +176,13 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p className="text-sm text-muted-foreground text-center md:text-left">
-            {t("footer.bottom.copyright")}
+          <p className="text-sm text-muted-foreground text-center md:text-left flex flex-col md:flex-row md:items-center gap-1 md:gap-3">
+            <span>{t("footer.bottom.copyright")}</span>
+            <span className="flex gap-3 justify-center md:justify-start">
+              <a href="mailto:support@httcoin.com" className="hover:text-primary transition-colors">support@httcoin.com</a>
+              <span className="text-muted-foreground/50">·</span>
+              <a href="mailto:Hotelcoinglobal@gmail.com" className="hover:text-primary transition-colors">Hotelcoinglobal@gmail.com</a>
+            </span>
           </p>
           
           <div className="flex items-center gap-4">

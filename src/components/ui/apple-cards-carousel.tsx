@@ -242,7 +242,7 @@ export const Card = ({ card, index, layout = false }: { card: Card; index: numbe
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-card/40 border border-white/10 md:h-[40rem] md:w-96"
+        className="relative z-10 flex aspect-square w-72 flex-col items-start justify-start overflow-hidden rounded-2xl bg-card/40 border border-white/10 md:w-80 md:rounded-3xl"
       >
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-20 p-5 text-left">
