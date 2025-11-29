@@ -96,7 +96,7 @@
     "specs": "Token Specifications"
   },
   "debit": {
-    "coming": "Coming Q2 2026",
+  "coming": "Coming Q3 2026",
     "title": "The {{brand}} Debit Card",
     "titleStart": "The",
     "titleEnd": "Debit Card",
@@ -171,7 +171,7 @@
     "faq": {
       "title": "Debit card FAQ",
       "q1": "When will the card launch?",
-      "a1": "Q2 2026 with phased regional expansion.",
+  "a1": "Q3 2026 with phased regional expansion.",
       "q2": "Is it a debit or credit card?",
   "a2": "It is a debit card powered by your HTTC balance.",
       "q3": "Which countries are supported?",

@@ -14,7 +14,7 @@ const categories = [
   {
     name: "Airlines",
     status: [
-  { label: "Hotel and Airways", status: "Official Partner", date: "Q2 2026" },
+  { label: "Hotel and Airways", status: "Official Partner", date: "Q3 2026" },
       { label: "Etihad Airways", status: "In Negotiation", date: "Q3 2026" },
       { label: "Turkish Airlines", status: "Coming Soon", date: "Q4 2026" },
       { label: "Virgin Atlantic", status: "Coming Soon", date: "Q1 2027" },
@@ -23,7 +23,7 @@ const categories = [
   {
     name: "Hotels & Resorts",
     status: [
-      { label: "Accor Group", status: "In Negotiation", date: "Q2 2026" },
+  { label: "Accor Group", status: "In Negotiation", date: "Q3 2026" },
       { label: "Marriott Bonvoy", status: "Coming Soon", date: "Q3 2026" },
       { label: "Hyatt", status: "Coming Soon", date: "Q4 2026" },
       { label: "Boutique Partners", status: "Open Enrollment", date: "Rolling" },
@@ -77,6 +77,8 @@ const PartnershipsPage = () => {
   const [contactName, setContactName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [country, setCountry] = useState("");
   const [website, setWebsite] = useState("");
   const [message, setMessage] = useState("");
 
@@ -89,6 +91,8 @@ const PartnershipsPage = () => {
       "Contact Name": contactName,
       "Email": email,
       "Phone": phone,
+      "Address": address,
+      "Country": country,
       "Website": website,
       "Message": message,
       "Page": "Partnerships Application"
@@ -103,6 +107,8 @@ const PartnershipsPage = () => {
     setContactName("");
     setEmail("");
     setPhone("");
+    setAddress("");
+    setCountry("");
     setWebsite("");
     setMessage("");
   };
@@ -165,7 +171,7 @@ const PartnershipsPage = () => {
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Featured Partner</p>
               <h3 className="text-2xl font-semibold">Hotel and Airways · Official Airline Partner</h3>
               <p className="text-sm text-muted-foreground">
-                Launching Q2 2026 · Earn HTTC on flights · Lounge perks for Gold/Platinum cardholders.
+                Launching Q3 2026 · Earn HTTC on flights · Lounge perks for Gold/Platinum cardholders.
               </p>
             </div>
           </motion.div>
@@ -247,6 +253,17 @@ const PartnershipsPage = () => {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
+              />
+              <Input 
+                placeholder="Address"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              />
+              <Input 
+                placeholder="Country"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
               />
               <Input 
                 placeholder="Website"

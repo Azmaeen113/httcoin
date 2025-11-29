@@ -68,13 +68,13 @@ const Partners = () => {
                   </h3>
                   
                   <p className="text-lg text-muted-foreground">
-                    Official travel partnership placeholder launching Q2 2026. Exclusive benefits for HTTCoin holders including priority booking, bonus rewards, and special fares.
+                    Official travel partnership placeholder launching Q3 2026. Exclusive benefits for HTTCoin holders including priority booking, bonus rewards, and special fares.
                   </p>
 
                   <div className="flex items-center gap-4 pt-4">
                     <div className="px-4 py-2 bg-accent/20 rounded-lg">
                       <div className="text-sm text-muted-foreground">Launch</div>
-                      <div className="text-lg font-bold text-accent">Q2 2026</div>
+                      <div className="text-lg font-bold text-accent">Q3 2026</div>
                     </div>
                     <div className="px-4 py-2 bg-primary/20 rounded-lg">
                       <div className="text-sm text-muted-foreground">Network</div>

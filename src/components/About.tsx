@@ -14,8 +14,8 @@ const About = () => {
   const features = [
     {
       icon: CreditCard,
-      title: "4% Travel Cashback",
-      description: "Earn HTT tokens on every travel booking - flights, hotels, tours, and more."
+      title: "Travel Cashback",
+      description: "Earn HTTC tokens on every travel booking - flights, hotels, tours, and more."
     },
     {
       icon: Hotel,

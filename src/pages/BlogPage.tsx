@@ -13,7 +13,7 @@ const articles = [
     id: 1,
     title: "Flagship Travel Partner + HTTCoin: What travelers can expect",
     category: "Announcements",
-    excerpt: "A deep dive into the flagship airline partnership launching in Q2 2026.",
+  excerpt: "A deep dive into the flagship airline partnership launching in Q3 2026.",
     author: "HTTCoin Team",
     date: "Nov 12, 2025",
     readTime: "6 min",
