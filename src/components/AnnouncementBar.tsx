@@ -7,18 +7,18 @@ const messages = [
   {
     id: 1,
     text: "🎉 Launching December 1, 2025! Secure your spot early.",
-    cta: "How to Buy HTT",
+  cta: "How to Buy HTTC",
     href: "/how-to-buy",
   },
   {
     id: 2,
-    text: "📰 Qatar Airways partnership announced! Exclusive perks coming.",
+    text: "📰 Flagship travel partnership announced! Exclusive perks coming.",
     cta: "See Partnerships",
     href: "/partnerships",
   },
   {
     id: 3,
-    text: "🔥 100M HTT pre-launch burn completed. Supply is deflationary.",
+  text: "🔥 100M HTTC pre-launch burn completed. Supply is deflationary.",
     cta: "Explore Tokenomics",
     href: "/tokenomics",
   },

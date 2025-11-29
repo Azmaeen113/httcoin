@@ -2,8 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function ColourfulText({ text }: { text: string }) {
-  const colors = [
+type ColourfulTextProps = {
+  text: string;
+  colors?: string[];
+  blurMaxPx?: number;
+  intensity?: number; // 0..1 scale for motion
+};
+
+export default function ColourfulText({ text, colors: customColors, blurMaxPx = 5, intensity = 1 }: ColourfulTextProps) {
+  const colors = customColors ?? [
     "rgb(131, 179, 32)",
     "rgb(47, 195, 106)",
     "rgb(42, 169, 210)",
@@ -35,9 +42,9 @@ export default function ColourfulText({ text }: { text: string }) {
       initial={{ y: 0 }}
       animate={{
         color: currentColors[index % currentColors.length],
-        y: [0, -3, 0],
-        scale: [1, 1.01, 1],
-        filter: ["blur(0px)", "blur(5px)", "blur(0px)"],
+        y: [0, -3 * intensity, 0],
+        scale: [1, 1 + 0.01 * intensity, 1],
+        filter: ["blur(0px)", `blur(${blurMaxPx}px)`, "blur(0px)"],
         opacity: [1, 0.85, 1],
       }}
       transition={{
@@ -51,5 +58,6 @@ export default function ColourfulText({ text }: { text: string }) {
   ));
 
   // Wrapping container prevents mid-word line breaks
-  return <span className="inline-flex whitespace-nowrap align-baseline">{letters}</span>;
+  // dir="ltr" ensures HTTCoin is always displayed left-to-right, even in RTL languages
+  return <span className="inline-flex whitespace-nowrap align-baseline" dir="ltr">{letters}</span>;
 }

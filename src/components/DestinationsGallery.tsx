@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpeg";
 import ColourfulText from "@/components/ui/colourful-text";
 import { destinationAssets, destinationCategories } from "@/data/gallery";
+import { useTranslation } from "react-i18next";
 
 const DestinationsGallery = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
   const [activeFilter, setActiveFilter] = useState("All");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -64,10 +66,10 @@ const DestinationsGallery = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            <ColourfulText text="HTTCoin" /> Around the World
+            {t("destinations.title", { brand: "" })} <ColourfulText text="HTTCoin" />
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Discover where your travel rewards take you
+            {t("destinations.discover")}
           </p>
         </motion.div>
 
@@ -170,16 +172,7 @@ const DestinationsGallery = () => {
                     </div>
                   </div>
 
-                  {/* Location Info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className={`font-bold text-white mb-2 transition-all ${isCenter ? 'text-2xl' : 'text-xl'}`}>
-                      {destination.name}
-                    </h3>
-                    <p className="text-white/80 text-sm">
-                      {destination.category} · {destination.region}
-                    </p>
-                    <p className="text-xs text-primary mt-2">{destination.launchDate}</p>
-                  </div>
+                  {/* Location Info removed per request: show clean images without text overlays */}
 
                   {/* Hover Effect for Center Card */}
                   {isCenter && (

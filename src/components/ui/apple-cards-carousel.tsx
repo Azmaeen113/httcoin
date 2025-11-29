@@ -31,6 +31,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Compute card width + gap depending on viewport
+  const getCardMetrics = () => {
+    const cardWidth = window.innerWidth < 768 ? 230 : 384; // matches Card sizes
+    const gap = window.innerWidth < 768 ? 4 : 8;
+    return { cardWidth, gap };
+  };
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -47,28 +55,62 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   };
 
   const scrollLeft = () => {
-    carouselRef.current?.scrollBy({ left: -300, behavior: "smooth" });
+    const { cardWidth, gap } = getCardMetrics();
+    animateScrollBy(-(cardWidth + gap));
   };
 
   const scrollRight = () => {
-    carouselRef.current?.scrollBy({ left: 300, behavior: "smooth" });
+    const { cardWidth, gap } = getCardMetrics();
+    animateScrollBy(cardWidth + gap);
   };
 
   const handleCardClose = (index: number) => {
     if (!carouselRef.current) return;
-    const cardWidth = window.innerWidth < 768 ? 230 : 384;
-    const gap = window.innerWidth < 768 ? 4 : 8;
+    const { cardWidth, gap } = getCardMetrics();
     const scrollPosition = (cardWidth + gap) * (index + 1);
-    carouselRef.current.scrollTo({
-      left: scrollPosition,
-      behavior: "smooth",
-    });
+    animateScrollTo(scrollPosition);
     setCurrentIndex(index);
+  };
+
+  // Ease-in-out cubic
+  const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+  // Animate scrollLeft by delta with easing
+  const animateScrollBy = (delta: number) => {
+    if (!carouselRef.current) return;
+    const start = carouselRef.current.scrollLeft;
+    animateScrollTo(start + delta);
+  };
+
+  const animateScrollTo = (target: number) => {
+    if (!carouselRef.current) return;
+    const element = carouselRef.current;
+    const start = element.scrollLeft;
+    const change = target - start;
+    const duration = 700; // ms
+    let startTime: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (startTime === null) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOut(progress);
+      element.scrollLeft = start + change * eased;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        checkScrollability();
+      }
+    };
+    requestAnimationFrame(step);
   };
 
   return (
     <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
-      <div className="relative w-full">
+      <div className="relative w-full"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
           ref={carouselRef}
@@ -136,6 +178,23 @@ export const Card = ({ card, index, layout = false }: { card: Card; index: numbe
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [handleClose]);
 
+  // Autoplay: advance cards right-to-left at an interval (paused when modal open)
+  useEffect(() => {
+    if (open) return; // pause autoplay when modal is open
+    const interval = setInterval(() => {
+      // Find and click the right-scroll button to keep manual behavior in sync
+      const rightBtn = document.querySelector<HTMLButtonElement>('[aria-label="Next"]') || undefined;
+      if (rightBtn && !rightBtn.disabled) {
+        rightBtn.click();
+      } else {
+        // fallback: dispatch custom event to scroll right
+        const evt = new CustomEvent('carousel-autoplay-next');
+        window.dispatchEvent(evt);
+      }
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [open]);
+
   const handleOpen = () => {
     setOpen(true);
     document.body.style.overflow = "hidden";
@@ -187,12 +246,17 @@ export const Card = ({ card, index, layout = false }: { card: Card; index: numbe
       >
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-20 p-5 text-left">
-          <motion.p layoutId={layout ? `category-${card.category}` : undefined} className="text-xs uppercase tracking-[0.3em] text-white/80 md:text-sm">
-            {card.category}
-          </motion.p>
-          <motion.p layoutId={layout ? `title-${card.title}` : undefined} className="mt-2 text-2xl font-semibold text-white md:text-3xl">
-            {card.title}
-          </motion.p>
+          {/* Hide category/title if empty to avoid overlays on images */}
+          {card.category && (
+            <motion.p layoutId={layout ? `category-${card.category}` : undefined} className="text-xs uppercase tracking-[0.3em] text-white/80 md:text-sm">
+              {card.category}
+            </motion.p>
+          )}
+          {card.title && (
+            <motion.p layoutId={layout ? `title-${card.title}` : undefined} className="mt-2 text-2xl font-semibold text-white md:text-3xl">
+              {card.title}
+            </motion.p>
+          )}
         </div>
         <BlurImage src={card.src} alt={card.title} className="absolute inset-0 h-full w-full object-cover" />
       </motion.button>

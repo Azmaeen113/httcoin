@@ -3,11 +3,13 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Plane, Hotel, CreditCard, TrendingUp, Globe, Zap } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
+import { useTranslation } from "react-i18next";
 import airplaneOwl from "@/assets/airplane-owl.jpg";
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const { t } = useTranslation();
 
   const features = [
     {
@@ -57,7 +59,8 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            What is <ColourfulText text="HTTCoin" />?
+            {/* Heading: "What is HTTCoin?" with proper punctuation */}
+            {t("about.whatIs", { brand: "HTTCoin" }) || "What is"} <ColourfulText text="HTTCoin" />?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             The world's first cryptocurrency designed specifically for global travelers. 
@@ -106,7 +109,7 @@ const About = () => {
                 <div className="text-sm text-muted-foreground">Blockchain</div>
               </div>
               <div className="px-6 py-3 bg-accent/10 border border-accent/30 rounded-lg">
-                <div className="text-2xl font-bold text-accent">HTT</div>
+                <div className="text-2xl font-bold text-accent">HTTC</div>
                 <div className="text-sm text-muted-foreground">Token Symbol</div>
               </div>
             </div>

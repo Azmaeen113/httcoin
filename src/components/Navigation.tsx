@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Globe, Moon, Sun } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 import ColourfulText from "@/components/ui/colourful-text";
@@ -15,31 +16,27 @@ import {
   MobileNavMenu,
 } from "./ui/resizable-navbar";
 
-const desktopMenu = [
-  { label: "Home", path: "/" },
-  { label: "Tokenomics", path: "/tokenomics" },
-  { label: "Debit Card", path: "/debit-card" },
-  { label: "Destinations", path: "/destinations" },
-  { label: "Partnerships", path: "/partnerships" },
-  { label: "How to Buy", path: "/how-to-buy" },
-  { label: "Whitepaper", path: "/whitepaper" },
-  { label: "Blog", path: "/blog" },
-];
-
 const languages = ["EN", "ES", "FR", "ZH", "AR"];
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState("EN");
+  const { t, i18n } = useTranslation();
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [hovered, setHovered] = useState<number | null>(null);
   const { open } = useWalletModal();
   const location = useLocation();
 
-  const navItems = desktopMenu.map(item => ({
-    name: item.label,
-    link: item.path,
-  }));
+  const navItems = [
+    { name: t("nav.home"), link: "/" },
+    { name: t("nav.tokenomics"), link: "/tokenomics" },
+    { name: t("nav.debitCard"), link: "/debit-card" },
+    { name: t("nav.destinations"), link: "/destinations" },
+    { name: t("nav.partnerships"), link: "/partnerships" },
+    { name: t("nav.howToBuy"), link: "/how-to-buy" },
+    { name: t("nav.whitepaper"), link: "/whitepaper" },
+    { name: t("nav.blog"), link: "/blog" },
+  ];
 
   useEffect(() => {
     const storedTheme = (window.localStorage.getItem("httcoin-theme") as "light" | "dark" | null) ?? "dark";
@@ -54,6 +51,14 @@ const Navigation = () => {
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
+  useEffect(() => {
+    const codeMap: Record<string, string> = { EN: "en", ES: "es", FR: "fr", ZH: "zh", AR: "ar" };
+    const langCode = codeMap[language] ?? "en";
+    i18n.changeLanguage(langCode);
+    window.localStorage.setItem("httcoin-lang", langCode);
+    // Set document direction for RTL languages
+    document.documentElement.setAttribute("dir", langCode === "ar" ? "rtl" : "ltr");
+  }, [language]);
 
   const handleNavClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,8 +71,13 @@ const Navigation = () => {
         <NavBody>
           <Link to="/" className="flex items-center gap-3 group relative z-20 flex-shrink-0" onClick={handleNavClick}>
             <img src={logo} alt="HTTCoin" className="w-10 h-10 rounded-full group-hover:scale-110 transition-transform" />
-            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              <ColourfulText text="HTTCoin" />
+            <span className="text-xl font-bold bg-clip-text text-transparent">
+              <ColourfulText
+                text="HTTCoin"
+                colors={["#60a5fa","#93c5fd","#bfdbfe","#e5f2ff","#ffffff"]}
+                blurMaxPx={2}
+                intensity={0.6}
+              />
             </span>
           </Link>
 
@@ -121,17 +131,15 @@ const Navigation = () => {
               </SelectContent>
             </Select>
 
-            <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </Button>
+
 
             <Button variant="outline" onClick={open} className="hidden xl:flex">
-              Connect Wallet
+              {t("nav.connectWallet")}
             </Button>
 
             <Link to="/how-to-buy" onClick={handleNavClick}>
               <Button className="shadow-lg shadow-primary/30">
-                Buy HTT
+                {t("nav.buyHTT")}
               </Button>
             </Link>
           </div>
@@ -142,8 +150,13 @@ const Navigation = () => {
           <MobileNavHeader>
             <Link to="/" className="flex items-center gap-3 group" onClick={() => { setIsOpen(false); handleNavClick(); }}>
               <img src={logo} alt="HTTCoin" className="w-10 h-10 rounded-full group-hover:scale-110 transition-transform" />
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                <ColourfulText text="HTTCoin" />
+              <span className="text-xl font-bold bg-clip-text text-transparent">
+                <ColourfulText
+                  text="HTTCoin"
+                  colors={["#60a5fa","#93c5fd","#bfdbfe","#e5f2ff","#ffffff"]}
+                  blurMaxPx={2}
+                  intensity={0.6}
+                />
               </span>
             </Link>
             <MobileNavToggle
@@ -190,9 +203,7 @@ const Navigation = () => {
                     ))}
                   </SelectContent>
                 </Select>
-                <Button variant="outline" onClick={toggleTheme} className="flex-1">
-                  {theme === "dark" ? "Light Mode" : "Dark Mode"}
-                </Button>
+
               </div>
               <Button
                 onClick={() => {
@@ -206,7 +217,7 @@ const Navigation = () => {
               </Button>
               <Link to="/how-to-buy" onClick={() => { setIsOpen(false); handleNavClick(); }}>
                 <Button className="w-full shadow-lg shadow-primary/30">
-                  Buy HTT
+                  {t("nav.buyHTT")}
                 </Button>
               </Link>
             </div>

@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ColourfulText from "@/components/ui/colourful-text";
+import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
 
 const articles = [
   {
     id: 1,
-    title: "Qatar Airways + HTTCoin: What travelers can expect",
+    title: "Flagship Travel Partner + HTTCoin: What travelers can expect",
     category: "Announcements",
     excerpt: "A deep dive into the flagship airline partnership launching in Q2 2026.",
     author: "HTTCoin Team",
@@ -16,11 +17,11 @@ const articles = [
     readTime: "6 min",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=900&q=60",
     content:
-      "HTTCoin is teaming up with Qatar Airways to unlock perks for debit card holders, including lounge access, priority boarding, and HTT cashback on flights...",
+      "HTTCoin is teaming up with a flagship travel partner to unlock perks for debit card holders, including lounge access, priority boarding, and HTTC cashback on flights...",
   },
   {
     id: 2,
-    title: "Beginner’s guide: Swapping SOL to HTT on Raydium",
+    title: "Beginner’s guide: Swapping SOL to HTTC on Raydium",
     category: "Crypto Education",
     excerpt: "Step-by-step walkthrough covering fees, slippage, and wallet safety.",
     author: "Amelia Cruise",
@@ -32,7 +33,7 @@ const articles = [
   },
   {
     id: 3,
-    title: "Top 10 beach destinations that will accept HTT",
+    title: "Top 10 beach destinations that will accept HTTC",
     category: "Travel Guides",
     excerpt: "From Maldives to Ibiza, discover sandy escapes ready for HTTCoin.",
     author: "Nathan Explorer",
@@ -40,7 +41,7 @@ const articles = [
     readTime: "5 min",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=60",
     content:
-      "We curated the most requested resort locations for HTT acceptance, aligned with our partner rollout roadmap...",
+      "We curated the most requested resort locations for HTTC acceptance, aligned with our partner rollout roadmap...",
   },
   {
     id: 4,
@@ -62,6 +63,21 @@ const BlogPage = () => {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All Posts");
   const [selectedArticle, setSelectedArticle] = useState<typeof articles[number] | null>(null);
+  const [blogEmail, setBlogEmail] = useState("");
+
+  const handleBlogSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (blogEmail) {
+      const subject = "HTTCoin Blog Newsletter Subscription";
+      const body = createFormEmailBody({
+        "Email": blogEmail,
+        "Subscription": "Blog Newsletter",
+        "Page": "Blog Page"
+      });
+      window.location.href = createEmailLink(subject, body);
+      setBlogEmail("");
+    }
+  };
 
   const filteredArticles = useMemo(() => {
     return articles.filter((article) => {
@@ -182,8 +198,16 @@ const BlogPage = () => {
           <div className="border border-border rounded-3xl p-6">
             <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
             <p className="text-sm text-muted-foreground mb-4">Get launch announcements and travel inspiration straight to your inbox.</p>
-            <Input placeholder="Email address" className="mb-3" />
-            <Button className="w-full">Subscribe</Button>
+            <form onSubmit={handleBlogSubscribe} className="space-y-3">
+              <Input 
+                type="email"
+                placeholder="Email address"
+                value={blogEmail}
+                onChange={(e) => setBlogEmail(e.target.value)}
+                required
+              />
+              <Button type="submit" className="w-full">Subscribe</Button>
+            </form>
           </div>
         </aside>
       </section>

@@ -19,7 +19,7 @@ const Tokenomics = () => {
   ];
 
   const tokenSpecs = [
-    { label: "Token Symbol", value: "HTT" },
+  { label: "Token Symbol", value: "HTTC" },
     { label: "Total Supply", value: "1,000,000,000" },
     { label: "Network", value: "Solana" },
     { label: "Decimals", value: "9" },

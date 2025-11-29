@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import ColourfulText from "@/components/ui/colourful-text";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { CheckCircle2, ChevronDown } from "lucide-react";
 
 const Roadmap = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
   const [expandedPhase, setExpandedPhase] = useState(2);
 
   const phases = [
@@ -65,7 +67,7 @@ const Roadmap = () => {
         "CEX listings",
         "HTTCoin debit card launch",
         "Travel marketplace beta",
-        "Hotel & airline integrations (Qatar Airways)",
+        "Hotel & airline integrations (Hotel and Airways)",
         "Merchant API",
         "Mobile app release"
       ],
@@ -113,11 +115,11 @@ const Roadmap = () => {
   };
 
   return (
-    <section ref={ref} className="py-24 px-4 relative overflow-hidden bg-gradient-to-b from-background via-card/30 to-background">
+    <section ref={ref} className="py-16 md:py-24 px-4 relative overflow-hidden bg-gradient-to-b from-background via-card/30 to-background">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20 md:opacity-30">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-40 h-40 md:w-64 md:h-64 bg-primary/20 rounded-full blur-2xl md:blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -125,7 +127,7 @@ const Roadmap = () => {
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-56 h-56 md:w-96 md:h-96 bg-accent/20 rounded-full blur-2xl md:blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
@@ -142,18 +144,18 @@ const Roadmap = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            <ColourfulText text="HTTCoin" /> Roadmap
+          <h2 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            {t("roadmap.title", { brand: "" })} <ColourfulText text="HTTCoin" />
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Our journey to revolutionize travel payments worldwide
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
+            {t("roadmap.subtitle")}
           </p>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative mt-10">
           {/* Static timeline line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-accent" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-accent" />
 
           <div className="space-y-12">
             {phases.map((phase, index) => {
@@ -181,7 +183,7 @@ const Roadmap = () => {
                       delay: index * 0.2 + 0.3,
                       ease: [0.4, 0, 0.2, 1]
                     }}
-                    className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 bg-gradient-to-br from-primary to-accent border-4 border-background rounded-full z-10 shadow-lg shadow-primary/30"
+                    className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3 h-3 md:w-4 md:h-4 bg-gradient-to-br from-primary to-accent border-3 md:border-4 border-background rounded-full z-10 shadow-lg shadow-primary/30"
                   />
 
                   {/* Phase number on alternating sides - centered with card */}
@@ -204,27 +206,27 @@ const Roadmap = () => {
 
                   <motion.div
                     layout
-                    className="w-full md:w-5/12 bg-card/90 backdrop-blur border border-border rounded-2xl p-6 shadow-lg hover:shadow-primary/20 transition-all duration-300 ml-20 md:ml-0"
+                    className="w-full md:w-5/12 bg-card/90 backdrop-blur border border-border rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-primary/20 transition-all duration-300 ml-12 md:ml-0"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {phase.phase}</p>
-                        <h3 className="text-2xl font-bold">{phase.title}</h3>
-                        <p className="text-sm text-muted-foreground">{phase.date}</p>
+                        <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground">Phase {phase.phase}</p>
+                        <h3 className="text-xl md:text-2xl font-bold">{phase.title}</h3>
+                        <p className="text-xs md:text-sm text-muted-foreground">{phase.date}</p>
                       </div>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(phase.status)}`}>
+                      <span className={`px-2.5 md:px-3 py-1 rounded-full text-[11px] md:text-xs font-semibold ${getStatusColor(phase.status)}`}>
                         {getStatusText(phase.status)}
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between mt-4">
-                      <p className="text-sm text-muted-foreground">Target: {phase.target}</p>
+                      <p className="text-xs md:text-sm text-muted-foreground">Target: {phase.target}</p>
                       <button
                         onClick={() => setExpandedPhase(expanded ? 0 : phase.phase)}
-                        className="flex items-center gap-1 text-primary text-sm"
+                        className="flex items-center gap-1.5 text-primary text-xs md:text-sm"
                       >
                         Details
-                        <ChevronDown className={`w-4 h-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
+                        <ChevronDown className={`w-3 h-3 md:w-4 md:h-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
                       </button>
                     </div>
 
@@ -254,9 +256,9 @@ const Roadmap = () => {
                           className="mt-4 space-y-2"
                         >
                           {phase.milestones.map((milestone, i) => (
-                            <li key={milestone} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <li key={milestone} className="flex items-start gap-2 text-xs md:text-sm text-muted-foreground">
                               <CheckCircle2
-                                className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                                className={`w-3 h-3 md:w-4 md:h-4 mt-0.5 flex-shrink-0 ${
                                   phase.status === "completed" ? "text-accent" : "text-primary"
                                 }`}
                               />

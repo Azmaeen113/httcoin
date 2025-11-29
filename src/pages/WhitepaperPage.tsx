@@ -23,7 +23,7 @@ const quickSummary = [
   { title: "Vision", value: "Making travel payments seamless" },
   { title: "Mission", value: "Reward every journey" },
   { title: "Market", value: "$1.4T travel industry" },
-  { title: "Unique Value", value: "4% cashback + burn mechanism" },
+  { title: "Unique Value", value: "Cashback + burn mechanism" },
 ];
 
 const WhitepaperPage = () => {

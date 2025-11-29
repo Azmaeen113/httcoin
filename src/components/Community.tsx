@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { MessageCircle, Twitter, Instagram, Facebook, Mail, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import ColourfulText from "@/components/ui/colourful-text";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
 
 const testimonials = [
   {
@@ -15,7 +17,7 @@ const testimonials = [
   {
     name: "Leo Park",
     title: "Luxury Hotelier",
-    quote: "Integrating HTT will let us settle payments instantly without FX headaches.",
+    quote: "Integrating HTTC will let us settle payments instantly without FX headaches.",
   },
   {
     name: "Naledi K.",
@@ -30,13 +32,14 @@ const testimonials = [
   {
     name: "Sara Q.",
     title: "Airline Executive",
-    quote: "The Qatar partnership unlocks premium perks for HTT debit cardholders.",
+    quote: "The flagship travel partnership unlocks premium perks for HTTC debit cardholders.",
   },
 ];
 
 const Community = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const { toast } = useToast();
@@ -72,7 +75,7 @@ const Community = () => {
       handle: "HTTCoin Official",
       members: "10,000+",
       color: "from-blue-600 to-indigo-700",
-      link: "https://facebook.com/httcoin"
+      link: "https://www.facebook.com/profile.php?id=61583661604184&sk=about"
     }
   ];
 
@@ -86,6 +89,13 @@ const Community = () => {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
+      const subject = "HTTCoin Newsletter Subscription";
+      const body = createFormEmailBody({
+        "Email": email,
+        "Subscription": "Newsletter",
+        "Page": "Community Section"
+      });
+      window.location.href = createEmailLink(subject, body);
       toast({
         title: "Success!",
         description: "You've been subscribed to HTTCoin updates.",
@@ -117,7 +127,7 @@ const Community = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Join the <ColourfulText text="HTTCoin" /> Movement
+            {t("community.join", { brand: "" })} <ColourfulText text="HTTCoin" />
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Connect with thousands of travelers and crypto enthusiasts building the future of travel payments

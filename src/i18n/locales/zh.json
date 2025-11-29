@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "home": "首页",
+    "tokenomics": "代币经济",
+    "debitCard": "借记卡",
+    "destinations": "目的地",
+    "partnerships": "合作伙伴",
+    "howToBuy": "如何购买",
+    "whitepaper": "白皮书",
+    "blog": "博客",
+    "connectWallet": "连接钱包",
+  "buyHTT": "购买 HTTC"
+  },
+  "hero": {
+    "badge": "重新定义旅行奖励",
+    "title": "与 {{brand}} 一起解锁无国界旅行奖励",
+    "buy": "购买 HTTCoin",
+    "downloadWhitepaper": "下载白皮书",
+    "stats": {
+      "cashback": "旅行返现",
+      "supply": "总供应量",
+      "partners": "2027 年合作伙伴",
+      "burn": "发布前销毁"
+    },
+  "badges": ["锁定流动性", "准备审计", "旗舰旅行合作伙伴", "由 Solana 驱动"],
+    "launch": "上线",
+    "launchDate": "2025 年 12 月 1 日"
+  },
+  "features": {
+    "sectionTitle": "为 {{brand}} 旅行者量身打造的生态系统"
+  },
+  "howItWorks": {
+    "title": "与你的 {{brand}} 之旅",
+      "titlePrefix": "你的",
+      "stepBadge": "步骤",
+  "subtitle": "遵循无缝的三步体验，从获取 HTTC 到在每次冒险中赚取奖励。",
+      "steps": {
+        "purchase": {
+          "title": "购买 HTTC",
+          "item1": "在 Raydium 或 Jupiter 购买 HTTCoin",
+          "item2": "安全存储在 Phantom 或 Solflare",
+          "item3": "已验证智能合约"
+        },
+        "book": {
+          "title": "预订旅行",
+          "item1": "在合作酒店和航空公司使用 HTTC",
+          "item2": "即时结算，低手续费",
+          "item3": "实时价格锁定"
+        },
+        "earn": {
+          "title": "赚取奖励",
+          "item1": "获得 HTTC 返现",
+          "item2": "在仪表板中跟踪奖励",
+          "item3": "为未来旅行复投"
+        }
+      }
+  },
+  "about": {
+    "whatIs": "什么是 {{brand}}？"
+  },
+  "community": {
+    "join": "加入"
+  },
+  "destinations": {
+    "badge": "全球网络",
+    "title": "{{brand}} 的世界",
+    "titleSuffix": "全球旅行网络",
+    "subtitle": "探索 50+ 精选目的地，HTTCoin 奖励为你解锁无缝预订、专属礼遇与即时支付。按类别、地区和准备情况筛选，规划你的下一次旅程。",
+    "discover": "探索你的旅行奖励将带你去何处",
+    "searchPlaceholder": "搜索目的地...",
+    "ctaTitleStart": "想在你的目的地看到",
+    "ctaTitleEnd": "吗？",
+    "ctaDescription": "提交合作意向，我们的集成团队会联系你并提供入驻详情。",
+    "ctaBullet1": "专属入驻礼宾服务",
+    "ctaBullet2": "营销与联合品牌支持",
+  "ctaBullet3": "HTTC 即时结算支付",
+    "formCompany": "公司名称",
+    "formWebsite": "网站",
+    "formMessage": "请介绍你的目的地或旅行服务",
+    "formSubmit": "提交申请",
+    "launchTarget": "上线目标",
+    "category": "类别",
+    "status": "状态",
+    "acceptedNoteStart": "附近酒店和景点将支持",
+    "acceptedNoteEnd": "一旦该目的地被标记为“已接受”。",
+    "removeFavorite": "移除收藏",
+    "saveFavorite": "保存到收藏"
+  },
+  "roadmap": {
+    "title": "{{brand}} 路线图",
+    "subtitle": "我们将革新全球旅行支付"
+  },
+  "tokenomics": {
+    "title": "{{brand}} 代币经济",
+    "titleNoBrand": "代币经济",
+    "specs": "代币规格"
+  },
+  "debit": {
+    "coming": "预计 2026 年第二季度",
+    "title": "{{brand}} 借记卡",
+    "titleStart": "",
+    "titleEnd": "借记卡",
+  "subtitle": "随处消费你的加密资产，立即获得 HTTC 奖励，并享受零兑换费的高级旅行福利。",
+    "joinWaitlist": "加入候补名单",
+    "downloadLitepaper": "下载精简白皮书",
+    "features": {
+      "title": "为旅行者打造的功能",
+      "global": { "title": "全球受理", "desc": "在 200+ 国家/地区可使用的 VISA 受理网络。" },
+  "instant": { "title": "即时兑换", "desc": "支付时 HTTC 自动转换为当地货币。" },
+  "cashback": { "title": "返现", "desc": "全球每笔消费都可即时获得 HTTC 奖励。" },
+      "fx": { "title": "零外汇费用", "desc": "无惧国际交易费用，尽享自由出行。" },
+      "contactless": { "title": "支持非接触支付", "desc": "兼容 Apple Pay、Google Pay 及可穿戴设备。" },
+      "security": { "title": "安全优先", "desc": "可即时冻结卡片，生物识别保护，7×24 小时欺诈监控。" },
+  "balances": { "title": "加密 + 法币余额", "desc": "在一个仪表盘中持有 HTTC、SOL 及主流法币。" },
+      "perks": { "title": "专属礼遇", "desc": "机场贵宾室、旅行保险及酒店升级。" }
+    },
+    "howItWorks": {
+      "title": "运行机制",
+      "stepLabel": "步骤 {{count}}",
+  "step1": { "title": "1. 充值 HTTC", "desc": "从你的钱包或 DEX 直接充值。" },
+      "step2": { "title": "2. 随处消费", "desc": "全球范围内可轻触、刷卡或使用移动钱包。" },
+  "step3": { "title": "3. 获得奖励", "desc": "HTTC 返现即时到账你的账户。" }
+    },
+    "tiers": {
+      "title": "分级体验",
+      "standard": {
+        "name": "标准版",
+        "requirement": "免费",
+        "perk1": "4% 返现",
+        "perk2": "零外汇费用",
+        "perk3": "移动应用访问",
+        "perk4": "虚拟与实体卡"
+      },
+      "gold": {
+        "name": "金卡",
+  "requirement": "质押 100K HTTC",
+        "perk1": "旅行返现 6%",
+        "perk2": "优先登机礼遇",
+        "perk3": "每年 4 次休息室使用",
+        "perk4": "专属礼宾服务"
+      },
+      "platinum": {
+        "name": "白金卡",
+  "requirement": "质押 500K HTTC",
+        "perk1": "8% 返现",
+        "perk2": "无限次休息室使用",
+        "perk3": "含旅行保险",
+        "perk4": "合作伙伴 VIP 升级"
+      }
+    },
+    "comparison": {
+      "title": "对比",
+      "colFeature": "功能",
+      "colHTT": "HTTCoin 借记卡",
+      "colCredit": "传统信用卡",
+      "colCrypto": "其他加密卡",
+  "rewards": { "feature": "奖励", "htt": "HTTC 返现", "credit": "积分 1-3%", "crypto": "最高 2%" },
+      "fx": { "feature": "外汇费", "htt": "0%", "credit": "2-4%", "crypto": "不定" },
+      "settlement": { "feature": "结算", "htt": "即时", "credit": "2-3 天", "crypto": "即时" },
+      "perks": { "feature": "礼遇", "htt": "旅行相关", "credit": "通用型", "crypto": "有限" },
+      "security": { "feature": "安全", "htt": "生物识别 + 冻结", "credit": "卡组织", "crypto": "仅钱包" }
+    },
+    "waitlist": {
+      "title": "加入候补名单",
+      "desc": "抢先体验、专属礼遇，以及 HTTCoin 借记卡测试版邀请。",
+      "name": "姓名",
+      "email": "邮箱",
+      "country": "国家/地区",
+      "current": "当前候补：{{count}} 位成员"
+    },
+    "faq": {
+      "title": "借记卡常见问题",
+      "q1": "卡片何时发布？",
+      "a1": "2026 年第二季度，分阶段在各地区推出。",
+      "q2": "它是借记卡还是信用卡？",
+  "a2": "这是一张由你的 HTTC 余额驱动的借记卡。",
+      "q3": "支持哪些国家/地区？",
+      "a3": "初期在欧盟、海湾国家和北美发布。",
+      "q4": "奖励如何发放？",
+  "a4": "返现会以 HTTC 形式即时发放到你的钱包。",
+      "q5": "费用有哪些？",
+      "a5": "标准版无年费。高级等级需质押。"
+    }
+  },
+  "partners": {
+    "badge": "合作伙伴",
+    "title": "与 {{brand}} 一起构建旅行的未来",
+    "becomePartner": "成为合作伙伴",
+    "downloadDeck": "下载合作资料"
+  },
+  "footer": {
+    "brandTagline": "用加密货币重塑旅行支付。每一次旅程都能获得奖励。",
+    "quick": {
+      "title": "快捷链接",
+      "home": "首页",
+      "about": "关于",
+      "tokenomics": "代币经济",
+      "howToBuy": "如何购买",
+      "whitepaper": "白皮书",
+      "blog": "博客"
+    },
+    "resources": {
+      "title": "资源",
+      "help": "帮助中心",
+      "faq": "常见问题",
+      "brand": "品牌资产",
+      "media": "媒体资源包",
+      "partnerships": "合作伙伴",
+      "contact": "联系我们"
+    },
+    "legal": {
+      "title": "法律",
+      "terms": "服务条款",
+      "privacy": "隐私政策",
+      "cookies": "Cookie 政策",
+      "disclaimer": "免责声明",
+      "risk": "风险提示"
+    },
+    "news": {
+      "title": "保持更新",
+      "desc": "获取 HTTCoin 发布与合作的最新消息",
+      "emailPlaceholder": "输入你的邮箱",
+      "subscribe": "订阅"
+    },
+    "bottom": {
+      "copyright": "© 2025 HTTCoin。保留所有权利。为旅行者而生 ❤️。",
+      "poweredBy": "技术支持",
+      "backToTopAria": "返回顶部"
+    }
+  },
+  "common": {
+    "close": "关闭",
+    "copy": "复制"
+  },
+  "security": {
+    "title": "建立在安全与透明之上",
+    "subtitle": "您的信任是我们的首要任务。HTTCoin 采用行业领先的安全措施设计。",
+    "antiRug": "防抽水设计",
+    "antiRugDesc": "发布后不再铸造。所有者无法更改余额。从第一天起就为安全而构建。",
+    "liquidityLocked": "流动性锁定",
+    "liquidityLockedDesc": "LP 代币永久锁定。在 Solana 区块链上验证，完全透明。",
+    "auditReady": "准备审计",
+    "auditReadyDesc": "代码经领先安全公司审计。安全报告将公开提供。",
+    "whitelistProtection": "白名单保护",
+    "whitelistProtectionDesc": "恶意钱包被屏蔽。通过高级保护确保早期阶段转账安全。",
+    "transparentTokenomics": "透明代币经济",
+    "transparentTokenomicsDesc": "所有分配公开。链上强制执行归属时间表，完全可见。",
+    "communityGoverned": "社区治理",
+    "communityGovernedDesc": "持有者投票权即将推出。为社区提供透明决策。",
+    "contractAddress": "智能合约地址",
+    "copied": "已复制！",
+    "copiedDesc": "合约地址已复制到剪贴板",
+    "viewOnSolscan": "在 Solscan 上查看",
+    "viewAuditReport": "查看审计报告",
+    "contractNote": "合约和验证链接将在发布时提供",
+    "badge1": "准备审计",
+    "badge2": "流动性锁定",
+    "badge3": "防抽水",
+    "badge4": "社区优先"
+    },
+    "tokenomicsPage": {
+      "badge": "透明、通缩、社区优先",
+      "subtitle": "旨在实现可持续增长、现实效用以及为旅行者和持有者提供长期奖励。",
+      "downloadDeck": "下载代币经济资料",
+      "viewSolscan": "在 Solscan 上查看",
+      "publicSale": "公开销售",
+      "travelRewards": "旅行奖励",
+      "team": "团队",
+      "marketing": "营销",
+      "liquidity": "流动性",
+      "partnerships": "合作伙伴",
+      "distribution": "分配",
+      "burnMechanism": "销毁机制",
+      "burnDescription": "通缩设计使供应量随时间保持稀缺。",
+      "preLaunchBurn": "发布前销毁",
+      "monthlyTxFees": "每月交易费用",
+      "quarterlyUnused": "季度未使用奖励",
+      "specialEvents": "特殊活动",
+      "variable": "可变",
+      "communityVote": "社区投票",
+      "totalBurned": "迄今为止销毁总量",
+      "vestingSchedule": "归属时间表",
+      "phase": "阶段",
+      "launch": "上线",
+      "launchDetail": "团队代币锁定",
+      "twoYearCliff": "2年锁定期",
+      "twoYearCliffDetail": "团队按月解锁",
+      "partnershipUnlocks": "合作伙伴解锁",
+      "partnershipUnlocksDetail": "基于里程碑",
+      "advisorUnlocks": "顾问解锁",
+      "advisorUnlocksDetail": "1年锁定期，18个月归属",
+      "utility": "效用",
+      "utility1": "旅行预订付款",
+      "utility2": "质押奖励（未来）",
+      "utility3": "治理投票",
+      "utility4": "借记卡充值",
+      "utility5": "专属合作伙伴特权",
+      "utility6": "商户结算",
+      "securityTransparency": "安全与透明",
+      "securityDetails": "合约所有者放弃 · 禁止铸造 · 流动性锁定 · 通过第三方审计准备就绪。",
+      "comparison": "与其他旅行代币的比较",
+      "metric": "指标",
+      "otherTravelTokens": "其他旅行代币",
+      "totalSupply": "总供应量",
+      "httSupply": "10亿（通缩）",
+      "othersSupply": "1-100亿（通胀）",
+      "httBurn": "每月和基于事件",
+      "othersBurn": "无",
+      "cashbackRate": "返现率",
+      "partnershipNetwork": "合作网络",
+      "httPartners": "航空公司 + 酒店",
+      "othersPartners": "有限"
+  }
+}

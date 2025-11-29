@@ -1,37 +1,57 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { MessageCircle, Twitter, Instagram, Facebook, ArrowUp, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.jpeg";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newsletterEmail) {
+      const subject = "HTTCoin Newsletter Subscription";
+      const body = createFormEmailBody({
+        "Email": newsletterEmail,
+        "Subscription": "Newsletter",
+        "Page": "Footer"
+      });
+      window.location.href = createEmailLink(subject, body);
+      setNewsletterEmail("");
+    }
+  };
+
   const footerLinks = {
     quickLinks: [
-      { name: "Home", path: "/" },
-      { name: "About", path: "/about" },
-      { name: "Tokenomics", path: "/tokenomics" },
-      { name: "How to Buy", path: "/how-to-buy" },
-      { name: "Whitepaper", path: "/whitepaper" },
-      { name: "Blog", path: "/blog" },
+      { name: t("footer.quick.home"), path: "/" },
+      { name: t("footer.quick.about"), path: "/about" },
+      { name: t("footer.quick.tokenomics"), path: "/tokenomics" },
+      { name: t("footer.quick.howToBuy"), path: "/how-to-buy" },
+      { name: t("footer.quick.whitepaper"), path: "/whitepaper" },
+      { name: t("footer.quick.blog"), path: "/blog" },
     ],
     resources: [
-      { name: "Help Center", path: "/help" },
-      { name: "FAQs", path: "/faq" },
-      { name: "Brand Assets", path: "/brand" },
-      { name: "Media Kit", path: "/media" },
-      { name: "Partnerships", path: "/partnerships" },
-      { name: "Contact", path: "/contact" },
+      { name: t("footer.resources.help"), path: "/help" },
+      { name: t("footer.resources.faq"), path: "/faq" },
+      { name: t("footer.resources.brand"), path: "/brand" },
+      { name: t("footer.resources.media"), path: "/media" },
+      { name: t("footer.resources.partnerships"), path: "/partnerships" },
+      { name: t("footer.resources.contact"), path: "/contact" },
     ],
     legal: [
-      { name: "Terms of Service", path: "/terms" },
-      { name: "Privacy Policy", path: "/privacy" },
-      { name: "Cookie Policy", path: "/cookies" },
-      { name: "Disclaimer", path: "/disclaimer" },
-      { name: "Risk Warning", path: "/risk" },
+      { name: t("footer.legal.terms"), path: "/terms" },
+      { name: t("footer.legal.privacy"), path: "/privacy" },
+      { name: t("footer.legal.cookies"), path: "/cookies" },
+      { name: t("footer.legal.disclaimer"), path: "/disclaimer" },
+      { name: t("footer.legal.risk"), path: "/risk" },
     ],
   };
 
@@ -39,7 +59,7 @@ const Footer = () => {
     { icon: MessageCircle, href: "https://t.me/httcoin1", label: "Telegram" },
     { icon: Twitter, href: "https://twitter.com/httcoin1", label: "Twitter" },
     { icon: Instagram, href: "https://instagram.com/httcoin1", label: "Instagram" },
-    { icon: Facebook, href: "https://facebook.com/httcoin", label: "Facebook" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583661604184&sk=about", label: "Facebook" },
   ];
 
   return (
@@ -51,12 +71,10 @@ const Footer = () => {
           <div className="lg:col-span-2 glass-panel rounded-3xl p-6 border border-white/10">
             <Link to="/" className="flex items-center gap-3 mb-4 group">
               <img src={logo} alt="HTTCoin" className="w-12 h-12 rounded-full group-hover:scale-110 transition-transform" />
-              <span className="text-2xl font-bold gradient-text">
-                HTTCoin
-              </span>
+              <span className="text-2xl font-bold gradient-text">HTTCoin</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Revolutionizing travel payments with cryptocurrency. Earn rewards on every journey.
+              {t("footer.brandTagline")}
             </p>
             
             {/* Social Links */}
@@ -83,7 +101,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-foreground font-semibold mb-4">{t("footer.quick.title")}</h3>
             <ul className="space-y-3">
               {footerLinks.quickLinks.map((link, index) => (
                 <li key={index}>
@@ -100,7 +118,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4">Resources</h3>
+            <h3 className="text-foreground font-semibold mb-4">{t("footer.resources.title")}</h3>
             <ul className="space-y-3">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
@@ -117,7 +135,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4">Legal</h3>
+            <h3 className="text-foreground font-semibold mb-4">{t("footer.legal.title")}</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
                 <li key={index}>
@@ -137,30 +155,33 @@ const Footer = () => {
           <div className="max-w-md">
             <h3 className="text-foreground font-semibold mb-2 flex items-center gap-2">
               <Mail className="w-5 h-5 text-primary" />
-              Stay Updated
+              {t("footer.news.title")}
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Get the latest updates about HTTCoin launch and partnerships
+              {t("footer.news.desc")}
             </p>
-            <div className="flex gap-2">
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t("footer.news.emailPlaceholder") || "Enter your email"}
                 className="flex-1 px-4 py-2 bg-background border border-border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
               />
-              <Button size="sm">Subscribe</Button>
-            </div>
+              <Button type="submit" size="sm">{t("footer.news.subscribe")}</Button>
+            </form>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © 2025 HTTCoin. All rights reserved. Built with ❤️ for travelers.
+            {t("footer.bottom.copyright")}
           </p>
           
           <div className="flex items-center gap-4">
-            <span>Powered by</span>
+            <span>{t("footer.bottom.poweredBy")}</span>
             <span className="text-sm font-semibold text-primary">Solana</span>
           </div>
 
@@ -170,7 +191,7 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-primary transition-colors"
-            aria-label="Back to top"
+            aria-label={t("footer.bottom.backToTopAria") || "Back to top"}
           >
             <ArrowUp className="w-5 h-5" />
           </motion.button>

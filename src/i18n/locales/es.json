@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "tokenomics": "Tokenomics",
+    "debitCard": "Tarjeta Débito",
+    "destinations": "Destinos",
+    "partnerships": "Alianzas",
+    "howToBuy": "Cómo Comprar",
+    "whitepaper": "Whitepaper",
+    "blog": "Blog",
+    "connectWallet": "Conectar Billetera",
+  "buyHTT": "Comprar HTTC"
+  },
+  "hero": {
+    "badge": "Recompensas de viaje reinventadas",
+    "title": "Desbloquea recompensas de viaje sin fronteras con {{brand}}",
+    "buy": "Comprar HTTCoin",
+    "downloadWhitepaper": "Descargar Whitepaper",
+    "stats": {
+      "cashback": "Cashback de Viaje",
+      "supply": "Suministro Total",
+      "partners": "Socios para 2027",
+      "burn": "Quema pre-lanzamiento"
+    },
+  "badges": ["Liquidez Bloqueada", "Auditoría Lista", "Socio de Viaje Insignia", "Impulsado por Solana"],
+    "launch": "Lanzamiento",
+    "launchDate": "1 Dic · 2025"
+  },
+  "features": {
+    "sectionTitle": "Un ecosistema hecho para viajeros de {{brand}}"
+  },
+  "howItWorks": {
+    "title": "Tu viaje con {{brand}}",
+    "titlePrefix": "Tu viaje con",
+    "stepBadge": "Paso a paso",
+  "subtitle": "Sigue una experiencia fluida de tres pasos que te lleva desde adquirir HTTC hasta ganar recompensas en cada aventura.",
+    "steps": {
+      "purchase": {
+  "title": "Comprar HTTC",
+        "item1": "Compra HTTCoin en Raydium o Jupiter",
+        "item2": "Guarda de forma segura en Phantom o Solflare",
+        "item3": "Contrato inteligente verificado"
+      },
+      "book": {
+        "title": "Reserva tu Viaje",
+  "item1": "Usa HTTC en hoteles y aerolíneas asociadas",
+        "item2": "Liquidación instantánea con tarifas bajas",
+        "item3": "Bloqueo de precio en tiempo real"
+      },
+      "earn": {
+        "title": "Gana Recompensas",
+  "item1": "Recibe cashback en HTTC",
+        "item2": "Rastrea recompensas en el panel",
+        "item3": "Capitaliza para futuros viajes"
+      }
+    }
+  },
+  "about": {
+    "whatIs": "¿Qué es {{brand}}?"
+  },
+  "community": {
+    "join": "Únete al"
+  },
+  "destinations": {
+    "badge": "Red Global",
+    "title": "{{brand}} alrededor del mundo",
+    "titleSuffix": "Red Global de Viajes",
+    "subtitle": "Explora 50+ destinos seleccionados donde las recompensas de HTTCoin desbloquean reservas sin fricción, beneficios exclusivos y pagos instantáneos. Filtra por categoría, región y estado para planear tu próximo viaje.",
+    "discover": "Descubre a dónde te llevan tus recompensas",
+    "searchPlaceholder": "Buscar destinos...",
+    "ctaTitleStart": "¿Quieres ver",
+    "ctaTitleEnd": "en tu destino?",
+    "ctaDescription": "Envía una solicitud de alianza y nuestro equipo de integraciones te contactará con los detalles de onboarding.",
+    "ctaBullet1": "Conserje de onboarding dedicado",
+    "ctaBullet2": "Apoyo de marketing y co-branding",
+  "ctaBullet3": "Pagos HTTC con liquidación instantánea",
+    "formCompany": "Nombre de la empresa",
+    "formWebsite": "Sitio web",
+    "formMessage": "Cuéntanos sobre tu destino o servicio de viaje",
+    "formSubmit": "Enviar solicitud",
+    "launchTarget": "Objetivo de lanzamiento",
+    "category": "Categoría",
+    "status": "Estado",
+    "acceptedNoteStart": "Hoteles y atracciones cercanas admitirán",
+    "acceptedNoteEnd": "una vez que este destino esté marcado como \"Aceptado\".",
+    "removeFavorite": "Quitar favorito",
+    "saveFavorite": "Guardar en favoritos"
+  },
+  "roadmap": {
+    "title": "Hoja de ruta de {{brand}}",
+    "subtitle": "Nuestro viaje para revolucionar los pagos de viaje"
+  },
+  "tokenomics": {
+    "title": "Tokenomics de {{brand}}",
+    "titleNoBrand": "Tokenomics",
+    "specs": "Especificaciones del Token"
+  },
+  "debit": {
+    "coming": "Próximamente Q2 2026",
+    "title": "La Tarjeta Débito de {{brand}}",
+    "titleStart": "La",
+    "titleEnd": "Tarjeta Débito",
+  "subtitle": "Gasta tu cripto en cualquier lugar, gana recompensas HTTC instantáneas y desbloquea beneficios de viaje premium sin tarifas de conversión.",
+    "joinWaitlist": "Únete a la lista",
+    "downloadLitepaper": "Descargar Litepaper",
+    "features": {
+      "title": "Funciones diseñadas para viajeros",
+      "global": { "title": "Aceptación global", "desc": "Gasta donde VISA sea aceptada en más de 200 países." },
+  "instant": { "title": "Conversión instantánea", "desc": "HTTC se convierte automáticamente a moneda local al pagar." },
+  "cashback": { "title": "Reembolso", "desc": "Gana recompensas HTTC al instante en cada compra." },
+      "fx": { "title": "Sin comisiones FX", "desc": "Viaja sin sorpresas por comisiones internacionales." },
+      "contactless": { "title": "Listo para contactless", "desc": "Funciona con Apple Pay, Google Pay y wearables." },
+      "security": { "title": "Seguridad primero", "desc": "Congela tarjetas al instante, protección biométrica y monitoreo antifraude 24/7." },
+  "balances": { "title": "Saldos cripto + fiat", "desc": "Mantén HTTC, SOL y monedas fiat principales en un solo panel." },
+      "perks": { "title": "Beneficios exclusivos", "desc": "Acceso a salas VIP, seguro de viaje y mejoras de hotel." }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "stepLabel": "Paso {{count}}",
+  "step1": { "title": "1. Cargar HTTC", "desc": "Recarga desde tu billetera o DEX." },
+      "step2": { "title": "2. Gasta en cualquier lugar", "desc": "Toca, desliza o usa billeteras móviles globalmente." },
+  "step3": { "title": "3. Gana recompensas", "desc": "El reembolso en HTTC llega instantáneamente a tu cuenta." }
+    },
+    "tiers": {
+      "title": "Experiencias por niveles",
+      "standard": {
+        "name": "Estándar",
+        "requirement": "Gratis",
+        "perk1": "4% de reembolso",
+        "perk2": "Sin comisiones FX",
+        "perk3": "Acceso a la app móvil",
+        "perk4": "Tarjeta virtual y física"
+      },
+      "gold": {
+        "name": "Oro",
+  "requirement": "Bloquear 100K HTTC",
+        "perk1": "6% de reembolso en viajes",
+        "perk2": "Beneficios de embarque prioritario",
+        "perk3": "Acceso a salas 4x/año",
+        "perk4": "Conserje dedicado"
+      },
+      "platinum": {
+        "name": "Platino",
+  "requirement": "Bloquear 500K HTTC",
+        "perk1": "8% de reembolso",
+        "perk2": "Acceso ilimitado a salas",
+        "perk3": "Seguro de viaje incluido",
+        "perk4": "Mejoras VIP con socios"
+      }
+    },
+    "comparison": {
+      "title": "Comparación",
+      "colFeature": "Función",
+      "colHTT": "Tarjeta HTTCoin",
+      "colCredit": "Crédito tradicional",
+      "colCrypto": "Otras tarjetas cripto",
+  "rewards": { "feature": "Recompensas", "htt": "Reembolso en HTTC", "credit": "1-3% en puntos", "crypto": "Hasta 2%" },
+      "fx": { "feature": "Comisiones FX", "htt": "0%", "credit": "2-4%", "crypto": "Variable" },
+      "settlement": { "feature": "Liquidación", "htt": "Instantánea", "credit": "2-3 días", "crypto": "Instantánea" },
+      "perks": { "feature": "Beneficios", "htt": "Enfocados en viajes", "credit": "Genéricos", "crypto": "Limitados" },
+      "security": { "feature": "Seguridad", "htt": "Biometría + congelar", "credit": "Red de tarjetas", "crypto": "Solo billetera" }
+    },
+    "waitlist": {
+      "title": "Únete a la lista de espera",
+      "desc": "Asegura acceso temprano, beneficios exclusivos e invitaciones a pruebas beta para la tarjeta de débito HTTCoin.",
+      "name": "Nombre",
+      "email": "Correo",
+      "country": "País",
+      "current": "Lista actual: {{count}} miembros"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes de la tarjeta",
+      "q1": "¿Cuándo se lanzará la tarjeta?",
+      "a1": "Q2 2026 con expansión regional por fases.",
+      "q2": "¿Es una tarjeta de débito o crédito?",
+  "a2": "Es una tarjeta de débito impulsada por tu saldo HTTC.",
+      "q3": "¿Qué países están soportados?",
+      "a3": "Lanzamiento inicial en UE, CCG y Norteamérica.",
+      "q4": "¿Cómo funcionan las recompensas?",
+  "a4": "El reembolso se distribuye al instante en HTTC a tu billetera.",
+      "q5": "¿Cuáles son las comisiones?",
+      "a5": "Sin cuota anual para Estándar. Los niveles premium requieren bloqueo."
+    }
+  },
+  "partners": {
+    "badge": "Socios",
+    "title": "Construyendo el futuro de los viajes juntos CON {{brand}}",
+    "becomePartner": "Conviértete en Socio",
+    "downloadDeck": "Descargar Presentación"
+  },
+  "footer": {
+    "brandTagline": "Revolucionando los pagos de viaje con criptomonedas. Gana recompensas en cada viaje.",
+    "quick": {
+      "title": "Enlaces rápidos",
+      "home": "Inicio",
+      "about": "Acerca de",
+      "tokenomics": "Tokenomics",
+      "howToBuy": "Cómo Comprar",
+      "whitepaper": "Whitepaper",
+      "blog": "Blog"
+    },
+    "resources": {
+      "title": "Recursos",
+      "help": "Centro de ayuda",
+      "faq": "Preguntas frecuentes",
+      "brand": "Recursos de marca",
+      "media": "Kit de medios",
+      "partnerships": "Alianzas",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Términos de servicio",
+      "privacy": "Política de privacidad",
+      "cookies": "Política de cookies",
+      "disclaimer": "Descargo de responsabilidad",
+      "risk": "Advertencia de riesgo"
+    },
+    "news": {
+      "title": "Mantente actualizado",
+      "desc": "Las últimas novedades del lanzamiento de HTTCoin y sus alianzas",
+      "emailPlaceholder": "Ingresa tu correo",
+      "subscribe": "Suscribirse"
+    },
+    "bottom": {
+      "copyright": "© 2025 HTTCoin. Todos los derechos reservados. Construido con ❤️ para viajeros.",
+      "poweredBy": "Impulsado por",
+      "backToTopAria": "Volver arriba"
+    }
+  },
+  "common": {
+    "close": "Cerrar",
+    "copy": "Copiar"
+  },
+  "security": {
+    "title": "Construido sobre Seguridad y Transparencia",
+    "subtitle": "Tu confianza es nuestra prioridad. HTTCoin está diseñado con medidas de seguridad líderes en la industria.",
+    "antiRug": "Diseño Anti-Rug",
+    "antiRugDesc": "Sin acuñación después del lanzamiento. El propietario no puede cambiar saldos. Construido para la seguridad desde el día uno.",
+    "liquidityLocked": "Liquidez Bloqueada",
+    "liquidityLockedDesc": "Tokens LP bloqueados permanentemente. Verificado en blockchain Solana para transparencia completa.",
+    "auditReady": "Auditoría Lista",
+    "auditReadyDesc": "Código auditado por empresas de seguridad líderes. El informe de seguridad estará disponible públicamente.",
+    "whitelistProtection": "Protección por Lista Blanca",
+    "whitelistProtectionDesc": "Billeteras maliciosas bloqueadas. Transferencias seguras en etapa temprana con protección avanzada.",
+    "transparentTokenomics": "Tokenomics Transparentes",
+    "transparentTokenomicsDesc": "Todas las asignaciones públicas. Calendarios de adquisición aplicados on-chain con visibilidad completa.",
+    "communityGoverned": "Gobernanza Comunitaria",
+    "communityGovernedDesc": "Derechos de voto para titulares próximamente. Toma de decisiones transparente para la comunidad.",
+    "contractAddress": "Dirección del Contrato Inteligente",
+    "copied": "¡Copiado!",
+    "copiedDesc": "Dirección del contrato copiada al portapapeles",
+    "viewOnSolscan": "Ver en Solscan",
+    "viewAuditReport": "Ver Informe de Auditoría",
+    "contractNote": "Los enlaces de contrato y verificación estarán disponibles en el lanzamiento",
+    "badge1": "Auditoría Lista",
+    "badge2": "Liquidez Bloqueada",
+    "badge3": "Anti-Rug",
+    "badge4": "Comunidad Primero"
+  },
+  "tokenomicsPage": {
+    "badge": "Transparente, deflacionario, centrado en la comunidad",
+    "subtitle": "Diseñado para crecimiento sostenible, utilidad del mundo real y recompensas a largo plazo para viajeros y titulares por igual.",
+    "downloadDeck": "Descargar Presentación de Tokenomics",
+    "viewSolscan": "Ver en Solscan",
+    "publicSale": "Venta Pública",
+    "travelRewards": "Recompensas de Viaje",
+    "team": "Equipo",
+    "marketing": "Marketing",
+    "liquidity": "Liquidez",
+    "partnerships": "Alianzas",
+    "distribution": "Distribución",
+    "burnMechanism": "Mecanismo de Quema",
+    "burnDescription": "El diseño deflacionario mantiene la oferta escasa con el tiempo.",
+    "preLaunchBurn": "Quema pre-lanzamiento",
+    "monthlyTxFees": "Tarifas TX mensuales",
+    "quarterlyUnused": "Recompensas no utilizadas trimestrales",
+    "specialEvents": "Eventos especiales",
+    "variable": "Variable",
+    "communityVote": "Voto comunitario",
+    "totalBurned": "Total quemado hasta la fecha",
+    "vestingSchedule": "Calendario de adquisición",
+    "phase": "Fase",
+    "launch": "Lanzamiento",
+    "launchDetail": "Tokens del equipo bloqueados",
+    "twoYearCliff": "Período de 2 Años",
+    "twoYearCliffDetail": "Equipo desbloquea mensualmente",
+    "partnershipUnlocks": "Desbloqueos de Alianzas",
+    "partnershipUnlocksDetail": "Basado en hitos",
+    "advisorUnlocks": "Desbloqueos de Asesores",
+    "advisorUnlocksDetail": "1 año de período, 18m de adquisición",
+    "utility": "Utilidad",
+    "utility1": "Pagos para reservas de viaje",
+    "utility2": "Recompensas de staking (futuro)",
+    "utility3": "Votación de gobernanza",
+    "utility4": "Recargas de tarjeta de débito",
+    "utility5": "Beneficios exclusivos de socios",
+    "utility6": "Liquidación de comerciantes",
+    "securityTransparency": "Seguridad y transparencia",
+    "securityDetails": "Propietario del contrato renunciado · Acuñación deshabilitada · Liquidez bloqueada · Auditoría lista con revisión de terceros.",
+    "comparison": "Comparación con otros tokens de viaje",
+    "metric": "Métrica",
+    "otherTravelTokens": "Otros tokens de viaje",
+    "totalSupply": "Suministro Total",
+    "httSupply": "1B (deflacionario)",
+    "othersSupply": "1-10B (inflacionario)",
+    "httBurn": "Mensual y basado en eventos",
+    "othersBurn": "Ninguno",
+    "cashbackRate": "Tasa de Cashback",
+    "partnershipNetwork": "Red de Alianzas",
+    "httPartners": "Aerolíneas + Hoteles",
+    "othersPartners": "Limitado"
+  }
+}

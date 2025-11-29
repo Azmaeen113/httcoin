@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Plane, Building2, MapPin, Ship, Calendar, Briefcase } from "lucide-react";
-import qatarAirways from "@/assets/qatar-airways.jpeg";
+import qatarAirways from "@/assets/qatar-airways.jpeg"; // Placeholder image while specific partner remains confidential
 
 const Partners = () => {
   const ref = useRef(null);
@@ -42,7 +42,7 @@ const Partners = () => {
           </p>
         </motion.div>
 
-        {/* Featured Partner: Qatar Airways */}
+  {/* Featured Partner (placeholder) */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 1 } : {}}
@@ -64,11 +64,11 @@ const Partners = () => {
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-bold">
-                    Qatar Airways
+                    Hotel and Airways
                   </h3>
                   
                   <p className="text-lg text-muted-foreground">
-                    Official Travel Partner launching Q2 2026. Exclusive benefits for HTTCoin holders including priority booking, bonus miles, and special fares.
+                    Official travel partnership placeholder launching Q2 2026. Exclusive benefits for HTTCoin holders including priority booking, bonus rewards, and special fares.
                   </p>
 
                   <div className="flex items-center gap-4 pt-4">
@@ -93,7 +93,7 @@ const Partners = () => {
                     <div className="absolute inset-0 bg-accent/20 blur-xl rounded-2xl" />
                     <img 
                       src={qatarAirways} 
-                      alt="Qatar Airways Partnership" 
+                      alt="Hotel and Airways Partnership" 
                       className="relative rounded-2xl shadow-2xl w-full h-auto"
                     />
                   </motion.div>

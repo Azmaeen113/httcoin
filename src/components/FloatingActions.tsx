@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUp, MessageCircle, Twitter, ShoppingBag } from "lucide-react";
+import { ArrowUp, MessageCircle, Twitter, ShoppingBag, Facebook } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useWalletModal } from "@/context/WalletModalContext";
 
@@ -54,6 +54,17 @@ const FloatingActions = () => {
           className="pointer-events-auto w-12 h-12 rounded-full bg-black text-white shadow-lg flex items-center justify-center"
         >
           <Twitter className="w-5 h-5" />
+        </motion.a>
+
+        <motion.a
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          href="https://www.facebook.com/profile.php?id=61583661604184&sk=about"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pointer-events-auto w-12 h-12 rounded-full bg-blue-600 text-white shadow-lg flex items-center justify-center"
+        >
+          <Facebook className="w-5 h-5" />
         </motion.a>
 
         <motion.button

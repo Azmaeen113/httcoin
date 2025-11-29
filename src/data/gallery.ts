@@ -122,8 +122,18 @@ const sortEntries = (entries: [string, unknown][]) => entries.sort((a, b) => a[0
 const generalModules = import.meta.glob("../assets/gallery/all/*", { eager: true });
 const qatarModules = import.meta.glob("../assets/gallery/qatar/*", { eager: true });
 
+// Allow excluding specific filenames from the slideshow without deleting files
+const excludedFilenames = new Set<string>([
+  // Exclude branding/placeholder images from the destination slideshow
+  "logo.JPG",
+  "logo final.jpeg",
+  "Bilbord1.jpg",
+  "token pic.jpeg",
+]);
+
 const buildAssets = (entries: [string, unknown][], type: "travel" | "partner") =>
-  sortEntries(entries).map(([path, mod], index): DestinationAsset => {
+  sortEntries(entries)
+    .map(([path, mod], index): DestinationAsset => {
     const normalizedIndex = index % cityPool.length;
     const regionIndex = index % regions.length;
     const categoryIndex = index % categories.length;
@@ -145,12 +155,23 @@ const buildAssets = (entries: [string, unknown][], type: "travel" | "partner") =
       badge: statusIndex === 0 ? "HTT Accepted" : "Coming Soon",
       type,
     };
-  });
+    })
+    .filter(asset => !excludedFilenames.has(asset.filename));
 
-export const destinationAssets: DestinationAsset[] = [
+// Shuffle helper to randomize order on each load
+const shuffle = <T,>(arr: T[]): T[] => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+export const destinationAssets: DestinationAsset[] = shuffle([
   ...buildAssets(Object.entries(generalModules), "travel"),
   ...buildAssets(Object.entries(qatarModules), "partner"),
-];
+]);
 
 export const destinationCategories: DestinationCategory[] = [
   "All",

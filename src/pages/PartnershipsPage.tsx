@@ -1,4 +1,5 @@
-import qatarImage from "@/assets/qatar-airways.jpeg";
+import { useState } from "react";
+import qatarImage from "@/assets/qatar-airways.jpeg"; // Placeholder image used while partnership details are confidential
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,12 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Check } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
+import { createEmailLink, createFormEmailBody } from "@/lib/email-utils";
+import { useToast } from "@/hooks/use-toast";
 
 const categories = [
   {
     name: "Airlines",
     status: [
-      { label: "Qatar Airways", status: "Official Partner", date: "Q2 2026" },
+  { label: "Hotel and Airways", status: "Official Partner", date: "Q2 2026" },
       { label: "Etihad Airways", status: "In Negotiation", date: "Q3 2026" },
       { label: "Turkish Airlines", status: "Coming Soon", date: "Q4 2026" },
       { label: "Virgin Atlantic", status: "Coming Soon", date: "Q1 2027" },
@@ -52,10 +55,10 @@ const benefits = [
 ];
 
 const successStories = [
-  { company: "Qatar Airways", quote: "HTTCoin lets us reward premium travelers in real-time.", owner: "VP Partnerships" },
+  { company: "Hotel and Airways", quote: "HTTCoin lets us reward premium travelers in real-time.", owner: "VP Partnerships" },
   {
     company: "LuxeStay Hotels",
-    quote: "We reduced payment friction for international guests with HTT.",
+  quote: "We reduced payment friction for international guests with HTTC.",
     owner: "Chief Commercial Officer",
   },
 ];
@@ -68,6 +71,42 @@ const timeline = [
 ];
 
 const PartnershipsPage = () => {
+  const { toast } = useToast();
+  const [companyName, setCompanyName] = useState("");
+  const [industry, setIndustry] = useState("");
+  const [contactName, setContactName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [website, setWebsite] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handlePartnerApplication = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = "HTTCoin Partnership Application";
+    const body = createFormEmailBody({
+      "Company Name": companyName,
+      "Industry": industry,
+      "Contact Name": contactName,
+      "Email": email,
+      "Phone": phone,
+      "Website": website,
+      "Message": message,
+      "Page": "Partnerships Application"
+    });
+    window.location.href = createEmailLink(subject, body);
+    toast({
+      title: "Application Submitted!",
+      description: "We'll review your partnership application and contact you soon.",
+    });
+    setCompanyName("");
+    setIndustry("");
+    setContactName("");
+    setEmail("");
+    setPhone("");
+    setWebsite("");
+    setMessage("");
+  };
+
   return (
     <div className="bg-background">
       <section className="relative py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-32 lg:pt-36">
@@ -121,12 +160,12 @@ const PartnershipsPage = () => {
             </div>
           </div>
           <motion.div whileHover={{ scale: 1.02 }} className="bg-card border border-border rounded-3xl overflow-hidden shadow-xl">
-            <img src={qatarImage} alt="Qatar Airways" className="w-full h-80 object-cover" />
+            <img src={qatarImage} alt="Hotel and Airways" className="w-full h-80 object-cover" />
             <div className="p-6 space-y-2">
               <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Featured Partner</p>
-              <h3 className="text-2xl font-semibold">Qatar Airways · Official Airline Partner</h3>
+              <h3 className="text-2xl font-semibold">Hotel and Airways · Official Airline Partner</h3>
               <p className="text-sm text-muted-foreground">
-                Launching Q2 2026 · Earn HTT on flights · Lounge perks for Gold/Platinum cardholders.
+                Launching Q2 2026 · Earn HTTC on flights · Lounge perks for Gold/Platinum cardholders.
               </p>
             </div>
           </motion.div>
@@ -177,14 +216,52 @@ const PartnershipsPage = () => {
           </div>
           <div className="bg-background border border-border rounded-3xl p-6 space-y-4">
             <h3 className="text-xl font-semibold">Partner application</h3>
-            <Input placeholder="Company name" />
-            <Input placeholder="Industry" />
-            <Input placeholder="Contact name" />
-            <Input placeholder="Email" />
-            <Input placeholder="Phone" />
-            <Input placeholder="Website" />
-            <Textarea placeholder="Tell us about your business and goals" rows={4} />
-            <Button>Submit Application</Button>
+            <form onSubmit={handlePartnerApplication} className="space-y-4">
+              <Input 
+                placeholder="Company name"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
+                required
+              />
+              <Input 
+                placeholder="Industry"
+                value={industry}
+                onChange={(e) => setIndustry(e.target.value)}
+                required
+              />
+              <Input 
+                placeholder="Contact name"
+                value={contactName}
+                onChange={(e) => setContactName(e.target.value)}
+                required
+              />
+              <Input 
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <Input 
+                placeholder="Phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <Input 
+                placeholder="Website"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+              />
+              <Textarea 
+                placeholder="Tell us about your business and goals"
+                rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+              />
+              <Button type="submit">Submit Application</Button>
+            </form>
           </div>
         </div>
       </section>
