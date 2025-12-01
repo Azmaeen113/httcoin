@@ -155,9 +155,6 @@ const DebitCardPage = () => {
             <p className="text-muted-foreground text-base sm:text-lg">{t("debit.subtitle")}</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center md:justify-start">
               <Button size="lg" className="w-full sm:w-auto">{t("debit.joinWaitlist")}</Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                {t("debit.downloadLitepaper")}
-              </Button>
             </div>
           </div>
           <div className="relative mt-8 md:mt-0">

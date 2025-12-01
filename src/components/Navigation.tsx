@@ -133,9 +133,9 @@ const Navigation = () => {
 
 
 
-            <Button variant="outline" onClick={open} className="hidden xl:flex">
+            {/* <Button variant="outline" onClick={open} className="hidden xl:flex">
               {t("nav.connectWallet")}
-            </Button>
+            </Button> */}
 
             <Link to="/how-to-buy" onClick={handleNavClick}>
               <Button className="shadow-lg shadow-primary/30">
@@ -205,6 +205,7 @@ const Navigation = () => {
                 </Select>
 
               </div>
+              {/*
               <Button
                 onClick={() => {
                   setIsOpen(false);
@@ -215,6 +216,7 @@ const Navigation = () => {
               >
                 Connect Wallet
               </Button>
+              */}
               <Link to="/how-to-buy" onClick={() => { setIsOpen(false); handleNavClick(); }}>
                 <Button className="w-full shadow-lg shadow-primary/30">
                   {t("nav.buyHTT")}

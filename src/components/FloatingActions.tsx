@@ -24,6 +24,7 @@ const FloatingActions = () => {
         transition={{ duration: 0.3 }}
         className="pointer-events-none fixed bottom-6 right-3 sm:right-6 lg:right-10 xl:right-16 z-40 flex flex-col gap-3"
       >
+        {/*
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -33,6 +34,7 @@ const FloatingActions = () => {
         >
           <ShoppingBag className="w-5 h-5" />
         </motion.button>
+        */}
 
         <motion.a
           whileHover={{ scale: 1.05 }}

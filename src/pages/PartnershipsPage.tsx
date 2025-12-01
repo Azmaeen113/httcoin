@@ -160,9 +160,6 @@ const PartnershipsPage = () => {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button size="lg">Become a Partner</Button>
-              <Button size="lg" variant="outline">
-                Download Partner Deck
-              </Button>
             </div>
           </div>
           <motion.div whileHover={{ scale: 1.02 }} className="bg-card border border-border rounded-3xl overflow-hidden shadow-xl">

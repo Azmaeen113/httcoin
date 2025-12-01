@@ -310,5 +310,155 @@
     "partnershipNetwork": "Red de Alianzas",
     "httPartners": "Aerolíneas + Hoteles",
     "othersPartners": "Limitado"
+  },
+  "whitepaper": {
+    "title": "Libro Blanco",
+    "intro": {
+      "title": "1. Introducción",
+      "p1": "HTTCoin es un activo digital de próxima generación diseñado para la industria de viajes. Nuestra misión es simple: hacer que los viajes globales sean más fáciles, más inteligentes y más gratificantes. Con HTTCoin, los viajeros pueden reservar hoteles, vuelos y actividades mientras ganan generosas recompensas que se pueden usar en todo el mundo.",
+      "p2": "HTTCoin conecta a viajeros, aerolíneas, hoteles y empresas de turismo en un ecosistema unificado."
+    },
+    "vision": {
+      "title": "2. Visión y Misión",
+      "visionTitle": "Visión",
+      "visionText": "Convertirse en el token de pago de viajes líder en el mundo que aporta transparencia, ahorro y recompensas a cada viajero.",
+      "missionTitle": "Misión",
+      "mission1": "Proporcionar pagos rápidos y seguros para servicios de viaje",
+      "mission2": "Dar a los usuarios recompensas de alto valor y cashback",
+      "mission3": "Construir alianzas con aerolíneas, hoteles y marcas de turismo",
+      "mission4": "Crear un ecosistema de viajes global impulsado por blockchain"
+    },
+    "problem": {
+      "title": "3. El Problema",
+      "intro": "Los viajeros enfrentan desafíos importantes hoy:",
+      "item1": "Tarifas altas para pagos internacionales",
+      "item2": "Sistemas de recompensas limitados",
+      "item3": "Procesos de reembolso lentos",
+      "item4": "Sin programa de lealtad global",
+      "item5": "Falta de transparencia en sistemas de reserva",
+      "solution": "HTTCoin resuelve estos problemas utilizando tecnología blockchain."
+    },
+    "solution": {
+      "title": "4. La Solución: Ecosistema HTTCoin",
+      "intro": "HTTCoin ofrece un ecosistema completo para viajes:",
+      "payment": {
+        "title": "Pago HTTCoin",
+        "desc": "Paga por vuelos, hoteles y tours al instante con tarifas bajas."
+      },
+      "rewards": {
+        "title": "Recompensas HTTCoin",
+        "desc": "Gana hasta 4%-8% de cashback en reservas futuras."
+      },
+      "card": {
+        "title": "Tarjeta de Débito HTTCoin",
+        "desc": "Usa tu token en todo el mundo para:",
+        "item1": "Vuelos",
+        "item2": "Hoteles",
+        "item3": "Restaurantes",
+        "item4": "Compras"
+      },
+      "marketplace": {
+        "title": "Mercado HTTCoin",
+        "desc": "Compra o vende servicios de viaje dentro del ecosistema."
+      }
+    },
+    "token": {
+      "title": "5. Información del Token",
+      "name": "Nombre del Token",
+      "symbol": "Símbolo",
+      "supply": "Suministro Total",
+      "decimals": "Decimales",
+      "blockchain": "Blockchain",
+      "minting": "Acuñación",
+      "mintingDisabled": "Deshabilitada (suministro fijo)"
+    },
+    "distribution": {
+      "title": "6. Distribución del Token",
+      "public": {
+        "title": "Venta Pública",
+        "desc": "Disponible para inversores públicos durante la Pre-Venta y el Lanzamiento."
+      },
+      "rewards": {
+        "title": "Recompensas de Viaje",
+        "desc": "Usado para cashback, bonos y recompensas a largo plazo."
+      },
+      "team": {
+        "title": "Equipo (Bloqueado 2 Años)",
+        "desc": "Asegura estabilidad y confianza a largo plazo."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Para campañas globales, influencers y promociones."
+      },
+      "liquidity": {
+        "title": "Fondo de Liquidez",
+        "desc": "Proporciona liquidez sólida de intercambio."
+      },
+      "partnerships": {
+        "title": "Alianzas",
+        "desc": "Aerolíneas, hoteles, agencias de turismo y marcas globales de viajes."
+      }
+    },
+    "burn": {
+      "title": "7. Estrategia de Quema",
+      "intro": "Para aumentar el valor del token y reducir la oferta:",
+      "item1": "Quemar 10% antes del lanzamiento",
+      "item2": "Quemar tokens de tarifas de transacción",
+      "item3": "Quemas estratégicas basadas en el crecimiento del ecosistema",
+      "conclusion": "Esto crea escasez a largo plazo y soporte de precio."
+    },
+    "roadmap": {
+      "title": "8. Hoja de Ruta",
+      "phase1": {
+        "title": "Fase 1 – Fundación",
+        "item1": "Creación de contrato inteligente",
+        "item2": "Sitio web y panel de control",
+        "item3": "Prueba de token",
+        "item4": "Marketing pre-lanzamiento"
+      },
+      "phase2": {
+        "title": "Fase 2 – Venta Pública",
+        "item1": "Lanzamiento del token",
+        "item2": "Listados en DEX",
+        "item3": "Inicio del Programa de Recompensas"
+      },
+      "phase3": {
+        "title": "Fase 3 – Expansión",
+        "item1": "Alianzas globales",
+        "item2": "Lanzamiento de Tarjeta de Débito HTTCoin",
+        "item3": "Integración del motor de reservas"
+      },
+      "phase4": {
+        "title": "Fase 4 – Ecosistema de Viajes Global",
+        "item1": "Agregar hoteles, aerolíneas y agencias de viajes",
+        "item2": "Expandir a más países",
+        "item3": "Activación completa del mercado"
+      },
+      "conclusion": "HTTCoin continuará evolucionando con las necesidades de los usuarios y el crecimiento del mercado global."
+    },
+    "utilities": {
+      "title": "9. Utilidades de HTTCoin",
+      "intro": "HTTCoin proporciona valor real:",
+      "item1": "Reservar hoteles y vuelos",
+      "item2": "Ganar recompensas de cashback",
+      "item3": "Pagar por servicios de viaje",
+      "item4": "Usar la tarjeta de débito globalmente",
+      "item5": "Acceder a beneficios de viaje VIP",
+      "item6": "Apostar tokens para ganar recompensas extra"
+    },
+    "why": {
+      "title": "10. ¿Por qué HTTCoin?",
+      "item1": "Utilidad del mundo real",
+      "item2": "Sistema de recompensas sólido",
+      "item3": "Uso mundial",
+      "item4": "Fácil de entender",
+      "item5": "Respaldado por tecnología blockchain transparente",
+      "item6": "Diseñado para millones de viajeros cada año"
+    },
+    "conclusion": {
+      "title": "11. Conclusión",
+      "p1": "HTTCoin no es solo otra criptomoneda. Es un ecosistema financiero de viajes completo que conecta millones de personas, empresas y destinos.",
+      "p2": "Con recompensas poderosas, uso global y potencial de crecimiento a largo plazo, HTTCoin está listo para cambiar el futuro de los viajes para siempre."
+    }
   }
 }

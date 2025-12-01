@@ -157,7 +157,7 @@ const Roadmap = () => {
           {/* Static timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-accent" />
 
-          <div className="space-y-12">
+          <div className="flex flex-col gap-12">
             {phases.map((phase, index) => {
               const expanded = expandedPhase === phase.phase;
               return (
@@ -170,9 +170,7 @@ const Roadmap = () => {
                     delay: index * 0.2,
                     ease: [0.4, 0, 0.2, 1]
                   }}
-                  className={`relative flex items-start ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  } flex-col gap-8`}
+                  className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-6 md:gap-8 pl-10 md:pl-0`}
                 >
                   {/* Timeline dot */}
                   <motion.div 
@@ -195,9 +193,7 @@ const Roadmap = () => {
                       delay: index * 0.2 + 0.3,
                       ease: [0.4, 0, 0.2, 1]
                     }}
-                    className={`hidden md:flex w-5/12 items-center ${
-                      index % 2 === 0 ? "justify-end pr-12" : "justify-start pl-12"
-                    }`}
+                    className={`hidden md:flex w-5/12 items-center ${index % 2 === 0 ? "justify-end pr-12" : "justify-start pl-12"}`}
                   >
                     <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-lg shadow-primary/30">
                       <span className="text-2xl font-bold text-primary-foreground">{phase.phase}</span>
@@ -206,7 +202,7 @@ const Roadmap = () => {
 
                   <motion.div
                     layout
-                    className="w-full md:w-5/12 bg-card/90 backdrop-blur border border-border rounded-2xl p-5 md:p-6 shadow-lg hover:shadow-primary/20 transition-all duration-300 ml-12 md:ml-0"
+                    className="w-full bg-card/90 backdrop-blur border border-border rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-primary/20 transition-all duration-300"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div>
@@ -258,9 +254,7 @@ const Roadmap = () => {
                           {phase.milestones.map((milestone, i) => (
                             <li key={milestone} className="flex items-start gap-2 text-xs md:text-sm text-muted-foreground">
                               <CheckCircle2
-                                className={`w-3 h-3 md:w-4 md:h-4 mt-0.5 flex-shrink-0 ${
-                                  phase.status === "completed" ? "text-accent" : "text-primary"
-                                }`}
+                                className={`w-3 h-3 md:w-4 md:h-4 mt-0.5 flex-shrink-0 ${phase.status === "completed" ? "text-accent" : "text-primary"}`}
                               />
                               <span>{milestone}</span>
                             </li>

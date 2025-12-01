@@ -93,12 +93,6 @@ const TokenomicsPage = () => {
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
               {t("tokenomicsPage.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
-              <Button size="lg" className="w-full sm:w-auto">{t("tokenomicsPage.downloadDeck")}</Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                {t("tokenomicsPage.viewSolscan")}
-              </Button>
-            </div>
           </div>
           <div className="relative mt-8 md:mt-0">
             <GlareCard className="relative overflow-hidden w-full max-w-md mx-auto">

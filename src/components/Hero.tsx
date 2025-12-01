@@ -3,9 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { ArrowRight, Download } from "lucide-react";
-import Countdown from "./Countdown";
 import ColourfulText from "@/components/ui/colourful-text";
 import solanaPhantomImage from "@/assets/gallery/qatar/Solana phantom.jpg";
+import { useBuyModal } from "@/context/BuyModalContext";
 
 const floatingDestinations = [
   { delay: 0, size: 80, x: "10%", y: "20%", color: "from-cyan-400/70 to-blue-500/30" },
@@ -17,6 +17,20 @@ const floatingDestinations = [
 const Hero = () => {
   const heroRef = useRef(null);
   const { t } = useTranslation();
+  const { open: openBuyModal } = useBuyModal();
+  const handleDownloadWhitepaper = () => {
+    try {
+      const link = document.createElement("a");
+      link.href = "/WhitepaperHTTCOIN.pdf"; // served from public
+      link.download = "HTTCoin-Whitepaper.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (e) {
+      // Fallback: navigate directly if download attribute fails
+      window.location.href = "/WhitepaperHTTCOIN.pdf";
+    }
+  };
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
@@ -94,7 +108,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35 }}
             >
-              <Button size="lg" className="cta-button text-primary-foreground shadow-lg hover:scale-[1.02] transition w-full sm:w-auto">
+              <Button size="lg" className="cta-button text-primary-foreground shadow-lg hover:scale-[1.02] transition w-full sm:w-auto" onClick={openBuyModal}>
                 {t("hero.buy")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -102,6 +116,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="border-white/30 bg-white/5 text-foreground hover:bg-white/10 hover:text-foreground w-full sm:w-auto"
+                onClick={handleDownloadWhitepaper}
               >
                 <Download className="mr-2 h-5 w-5" />
                 {t("hero.downloadWhitepaper")}
@@ -157,9 +172,8 @@ const Hero = () => {
                   <span>Dec 1 · 2025</span>
                 </div>
                 <div className="flex-1" />
-                <div className="scale-[0.6] sm:scale-[0.7] md:scale-[0.8] origin-bottom">
-                  <Countdown />
-                </div>
+                {/* Timer fully removed per latest request; empty spacer retained for composition */}
+                <div className="scale-[0.6] sm:scale-[0.7] md:scale-[0.8] origin-bottom" />
               </div>
             </motion.div>
           </motion.div>

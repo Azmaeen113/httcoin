@@ -15,31 +15,37 @@ import WhitepaperPage from "@/pages/WhitepaperPage";
 import BlogPage from "@/pages/BlogPage";
 import StakingPage from "@/pages/StakingPage";
 import AboutPage from "@/pages/AboutPage";
+import { WhitepaperModalProvider } from "@/context/WhitepaperModalContext";
+import { BuyModalProvider } from "@/context/BuyModalContext";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/tokenomics" element={<TokenomicsPage />} />
-            <Route path="/debit-card" element={<DebitCardPage />} />
-            <Route path="/destinations" element={<DestinationsPage />} />
-            <Route path="/partnerships" element={<PartnershipsPage />} />
-            <Route path="/how-to-buy" element={<HowToBuyPage />} />
-            <Route path="/whitepaper" element={<WhitepaperPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/staking" element={<StakingPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <WhitepaperModalProvider>
+        <BuyModalProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+          <Routes>
+            <Route element={<MainLayout />}>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/tokenomics" element={<TokenomicsPage />} />
+              <Route path="/debit-card" element={<DebitCardPage />} />
+              <Route path="/destinations" element={<DestinationsPage />} />
+              <Route path="/partnerships" element={<PartnershipsPage />} />
+              <Route path="/how-to-buy" element={<HowToBuyPage />} />
+              <Route path="/whitepaper" element={<WhitepaperPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/staking" element={<StakingPage />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+          </BrowserRouter>
+        </BuyModalProvider>
+      </WhitepaperModalProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

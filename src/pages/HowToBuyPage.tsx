@@ -7,6 +7,7 @@ import { Wallet, Shield, Video, Download } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
 import { GlareCard } from "@/components/ui/glare-card";
 import img18 from "@/assets/gallery/all/18.JPG";
+import { useBuyModal } from "@/context/BuyModalContext";
 
 const prerequisites = [
   "Solana wallet (Phantom recommended)",
@@ -88,6 +89,7 @@ const officialLinks = [
 ];
 
 const HowToBuyPage = () => {
+  const { open: openBuyModal } = useBuyModal();
   return (
     <div className="bg-background">
       <section className="relative py-16 md:py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-24 sm:pt-28 lg:pt-36">
@@ -131,11 +133,8 @@ const HowToBuyPage = () => {
             <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
               Follow this step-by-step guide to join the HTTC ecosystem safely and confidently.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap justify-center md:justify-start">
-              <Button size="lg" className="w-full sm:w-auto">Watch Tutorial</Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                Download PDF Guide
-              </Button>
+            <div className="flex justify-center md:justify-start">
+              <Button size="lg" className="mt-2" onClick={openBuyModal}>Buy Now</Button>
             </div>
           </div>
           <div className="relative mt-8 md:mt-0">
@@ -170,14 +169,7 @@ const HowToBuyPage = () => {
             <CardTitle className="text-lg sm:text-xl">HTTCoin Guide</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <p className="text-xs sm:text-sm text-muted-foreground">Download our complete guide to buying and using HTTC tokens.</p>
-            <Button 
-              className="w-full"
-              onClick={() => window.open('/httcoin-guide.pdf', '_blank')}
-            >
-              <Download className="w-4 h-4 mr-2" />
-              Download PDF Guide
-            </Button>
+            <p className="text-xs sm:text-sm text-muted-foreground">Complete guide to buying and using HTTC tokens coming soon.</p>
           </CardContent>
         </Card>
       </section>

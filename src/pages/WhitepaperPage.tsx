@@ -5,6 +5,7 @@ import ColourfulText from "@/components/ui/colourful-text";
 import { GlareCard } from "@/components/ui/glare-card";
 import img34 from "@/assets/gallery/all/34.JPG";
 import stadiumOwl from "@/assets/stadium-owl.jpg";
+import { useWhitepaperModal } from "@/context/WhitepaperModalContext";
 
 const toc = [
   "Executive Summary",
@@ -30,6 +31,49 @@ const quickSummary = [
 ];
 
 const WhitepaperPage = () => {
+  const { open: openWhitepaper, openWithLang } = useWhitepaperModal();
+
+  const handleLanguageClick = (langCode: string) => {
+    // Only adjust document direction for visual consistency, do NOT change global language
+    document.documentElement.setAttribute("dir", langCode === "ar" ? "rtl" : "ltr");
+    openWithLang(langCode);
+  };
+
+  const languages = [
+    { label: "English", code: "en" },
+    { label: "Spanish", code: "es" },
+    { label: "Chinese", code: "zh" },
+    { label: "French", code: "fr" },
+    { label: "Arabic", code: "ar" },
+  ];
+
+  const openShare = (platform: string) => {
+    // Use explicit domains as requested
+    const pdfUrl = "http://www.htttcoin.com/WhitepaperHTTCOIN.pdf"; // note: triple 't' per request
+    const siteUrl = "https://www.httcoin.com"; // official site link in message
+    const message = "HTTCoin: Earn travel cashback, seamless payments, and deflationary rewards. Read the whitepaper and join early buyers!";
+    const fullText = `${message} ${siteUrl}`;
+    const encodedText = encodeURIComponent(fullText);
+    let shareUrl = siteUrl;
+    switch (platform) {
+      case "Twitter":
+        // Prefill tweet with persuasive copy and include site + PDF link
+        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodeURIComponent(pdfUrl)}`;
+        break;
+      case "LinkedIn":
+        // LinkedIn primarily uses URL; message comes from the page preview
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pdfUrl)}`;
+        break;
+      case "Telegram":
+        // Telegram supports text + URL
+        shareUrl = `https://t.me/share/url?url=${encodeURIComponent(pdfUrl)}&text=${encodedText}`;
+        break;
+      default:
+        shareUrl = pdfUrl;
+    }
+    window.open(shareUrl, "_blank", "noopener,noreferrer");
+  };
+  
   return (
     <div className="bg-background">
       <section className="relative py-24 px-4 overflow-hidden -mt-20 lg:-mt-24 pt-32 lg:pt-36">
@@ -75,10 +119,14 @@ const WhitepaperPage = () => {
               Explore the technical documentation, token economics, and long-term vision driving HTTCoin&apos;s travel-focused ecosystem.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 flex-wrap justify-center md:justify-start">
-              {["PDF (English)", "PDF (Spanish)", "PDF (Chinese)", "PDF (French)"].map((label) => (
-                <Button key={label} className="flex items-center gap-2 w-full sm:w-auto">
+        {languages.map(({ label, code }) => (
+                <Button 
+          key={code}
+                  className="flex items-center gap-2 w-full sm:w-auto"
+          onClick={() => handleLanguageClick(code)}
+                >
                   <Download className="w-4 h-4" />
-                  {label}
+                  View ({label})
                 </Button>
               ))}
             </div>
@@ -100,9 +148,13 @@ const WhitepaperPage = () => {
       <section className="max-w-6xl mx-auto px-4 pb-20 grid lg:grid-cols-3 gap-10">
         <div className="lg:col-span-2 border border-border rounded-3xl overflow-hidden">
           <div className="bg-card border-b border-border p-4 flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Embedded PDF Viewer</h2>
-            <Button variant="outline" size="sm">
-              Fullscreen
+            <h2 className="text-xl font-semibold">Whitepaper Preview</h2>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={openWhitepaper}
+            >
+              View Full Whitepaper
             </Button>
           </div>
           <div className="h-[600px] bg-muted relative overflow-hidden rounded-b-3xl">
@@ -115,11 +167,19 @@ const WhitepaperPage = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="relative z-10 h-full flex flex-col items-center justify-center gap-4 px-6 text-center">
               <p className="text-white text-xl md:text-2xl font-semibold drop-shadow">
-                Embedded PDF Viewer Coming Soon
+                Click to View Full Whitepaper
               </p>
-              <p className="text-white/80 max-w-md text-sm md:text-base">
-                For now, use the download buttons above to access the whitepaper in your preferred language.
+              <p className="text-white/80 max-w-md text-sm md:text-base mb-4">
+                Access the complete whitepaper with all details about HTTCoin's vision, tokenomics, and roadmap.
               </p>
+              <Button 
+                size="lg"
+                onClick={openWhitepaper}
+                className="bg-primary hover:bg-primary/90"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Open Whitepaper
+              </Button>
             </div>
           </div>
         </div>
@@ -148,7 +208,13 @@ const WhitepaperPage = () => {
         <h3 className="text-2xl font-bold">Share</h3>
         <div className="flex gap-4">
           {["Twitter", "LinkedIn", "Telegram"].map((platform) => (
-            <Button key={platform} variant="outline" className="flex items-center gap-2">
+            <Button 
+              key={platform} 
+              variant="outline" 
+              className="flex items-center gap-2"
+              aria-label={`Share on ${platform}`}
+              onClick={() => openShare(platform)}
+            >
               <Share2 className="w-4 h-4" />
               {platform}
             </Button>

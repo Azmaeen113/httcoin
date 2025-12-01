@@ -310,5 +310,155 @@
       "partnershipNetwork": "合作网络",
       "httPartners": "航空公司 + 酒店",
       "othersPartners": "有限"
+  },
+  "whitepaper": {
+    "title": "白皮书",
+    "intro": {
+      "title": "1. 简介",
+      "p1": "HTTCoin是为旅游行业设计的下一代数字资产。我们的使命很简单：让全球旅行更容易、更智能、更有回报。通过HTTCoin，旅行者可以预订酒店、航班和活动，同时赚取可在全球使用的慷慨奖励。",
+      "p2": "HTTCoin将旅行者、航空公司、酒店和旅游公司连接到一个统一的生态系统中。"
+    },
+    "vision": {
+      "title": "2. 愿景与使命",
+      "visionTitle": "愿景",
+      "visionText": "成为世界领先的旅行支付代币，为每位旅行者带来透明度、节省和奖励。",
+      "missionTitle": "使命",
+      "mission1": "为旅行服务提供快速安全的支付",
+      "mission2": "为用户提供高价值奖励和返现",
+      "mission3": "与航空公司、酒店和旅游品牌建立合作关系",
+      "mission4": "创建全球区块链驱动的旅行生态系统"
+    },
+    "problem": {
+      "title": "3. 问题",
+      "intro": "旅行者今天面临的主要挑战：",
+      "item1": "国际支付费用高",
+      "item2": "奖励系统有限",
+      "item3": "退款流程缓慢",
+      "item4": "没有全球忠诚度计划",
+      "item5": "预订系统缺乏透明度",
+      "solution": "HTTCoin使用区块链技术解决这些问题。"
+    },
+    "solution": {
+      "title": "4. 解决方案：HTTCoin生态系统",
+      "intro": "HTTCoin为旅行提供完整的生态系统：",
+      "payment": {
+        "title": "HTTCoin支付",
+        "desc": "以低费用即时支付航班、酒店和旅游费用。"
+      },
+      "rewards": {
+        "title": "HTTCoin奖励",
+        "desc": "在未来预订中赚取高达4%-8%的返现。"
+      },
+      "card": {
+        "title": "HTTCoin借记卡",
+        "desc": "在全球范围内使用您的代币：",
+        "item1": "航班",
+        "item2": "酒店",
+        "item3": "餐厅",
+        "item4": "购物"
+      },
+      "marketplace": {
+        "title": "HTTCoin市场",
+        "desc": "在生态系统内买卖旅行服务。"
+      }
+    },
+    "token": {
+      "title": "5. 代币信息",
+      "name": "代币名称",
+      "symbol": "符号",
+      "supply": "总供应量",
+      "decimals": "小数位",
+      "blockchain": "区块链",
+      "minting": "铸造",
+      "mintingDisabled": "已禁用（固定供应）"
+    },
+    "distribution": {
+      "title": "6. 代币分配",
+      "public": {
+        "title": "公开销售",
+        "desc": "在预售和发布期间向公众投资者开放。"
+      },
+      "rewards": {
+        "title": "旅行奖励",
+        "desc": "用于返现、奖金和长期奖励。"
+      },
+      "team": {
+        "title": "团队（锁定2年）",
+        "desc": "确保长期稳定和信任。"
+      },
+      "marketing": {
+        "title": "营销",
+        "desc": "用于全球活动、影响者和促销。"
+      },
+      "liquidity": {
+        "title": "流动性池",
+        "desc": "提供强大的交易所流动性。"
+      },
+      "partnerships": {
+        "title": "合作伙伴",
+        "desc": "航空公司、酒店、旅游机构和全球旅行品牌。"
+      }
+    },
+    "burn": {
+      "title": "7. 销毁策略",
+      "intro": "为了增加代币价值并减少供应：",
+      "item1": "发布前销毁10%",
+      "item2": "销毁交易费用中的代币",
+      "item3": "基于生态系统增长的战略性销毁",
+      "conclusion": "这创造了长期稀缺性和价格支撑。"
+    },
+    "roadmap": {
+      "title": "8. 路线图",
+      "phase1": {
+        "title": "第1阶段 – 基础",
+        "item1": "智能合约创建",
+        "item2": "网站和仪表板",
+        "item3": "代币测试",
+        "item4": "发布前营销"
+      },
+      "phase2": {
+        "title": "第2阶段 – 公开销售",
+        "item1": "代币发布",
+        "item2": "在DEX上市",
+        "item3": "奖励计划开始"
+      },
+      "phase3": {
+        "title": "第3阶段 – 扩展",
+        "item1": "全球合作伙伴关系",
+        "item2": "HTTCoin借记卡发布",
+        "item3": "预订引擎集成"
+      },
+      "phase4": {
+        "title": "第4阶段 – 全球旅行生态系统",
+        "item1": "添加酒店、航空公司和旅行社",
+        "item2": "扩展到更多国家",
+        "item3": "完全激活市场"
+      },
+      "conclusion": "HTTCoin将继续随着用户需求和全球市场增长而发展。"
+    },
+    "utilities": {
+      "title": "9. HTTCoin的实用性",
+      "intro": "HTTCoin提供真正的价值：",
+      "item1": "预订酒店和航班",
+      "item2": "赚取返现奖励",
+      "item3": "支付旅行服务",
+      "item4": "全球使用借记卡",
+      "item5": "访问VIP旅行福利",
+      "item6": "质押代币以赚取额外奖励"
+    },
+    "why": {
+      "title": "10. 为什么选择HTTCoin？",
+      "item1": "现实世界的实用性",
+      "item2": "强大的奖励系统",
+      "item3": "全球使用",
+      "item4": "易于理解",
+      "item5": "由透明的区块链技术支持",
+      "item6": "专为每年数百万旅行者设计"
+    },
+    "conclusion": {
+      "title": "11. 结论",
+      "p1": "HTTCoin不仅仅是另一种加密货币。它是一个完整的旅行金融生态系统，连接数百万人、企业和目的地。",
+      "p2": "凭借强大的奖励、全球使用和长期增长潜力，HTTCoin已准备好永远改变旅行的未来。"
+    }
   }
 }

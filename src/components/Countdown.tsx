@@ -11,19 +11,33 @@ const Countdown = () => {
   });
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    let timerId: number | undefined;
+    const tick = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
 
+      if (distance <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        // Stop updating once we hit zero
+        if (timerId !== undefined) clearInterval(timerId);
+        return;
+      }
+
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000),
       });
-    }, 1000);
+    };
 
-    return () => clearInterval(interval);
+    // Run an initial tick to set immediate state
+  timerId = window.setInterval(tick, 1000);
+    tick();
+
+    return () => clearInterval(timerId);
   }, [targetDate]);
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
