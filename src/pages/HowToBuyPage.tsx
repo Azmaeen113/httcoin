@@ -82,7 +82,7 @@ const warnings = [
 ];
 
 const officialLinks = [
-  { label: "Official Contract", value: "HTTC...coming Dec 1, 2025" },
+  { label: "Official Contract", value: "3tCyxnbAuRhmzy8t84u53V2ffzPcF7hN77sZRdiKQI" },
   { label: "Website", value: "httcoin.com" },
   { label: "Telegram", value: "t.me/httcoin1" },
   { label: "Twitter", value: "twitter.com/httcoin1" },
