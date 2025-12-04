@@ -58,7 +58,7 @@ const WhitepaperPage = () => {
     switch (platform) {
       case "Twitter":
         // Prefill tweet with persuasive copy and include site + PDF link
-        shareUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodeURIComponent(pdfUrl)}`;
+        shareUrl = `https://x.com/intent/tweet?text=${encodedText}&url=${encodeURIComponent(pdfUrl)}`;
         break;
       case "LinkedIn":
         // LinkedIn primarily uses URL; message comes from the page preview

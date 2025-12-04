@@ -14,26 +14,26 @@ const categories = [
   {
     name: "Airlines",
     status: [
-  { label: "Hotel and Airways", status: "Official Partner", date: "Q3 2026" },
-      { label: "Etihad Airways", status: "In Negotiation", date: "Q3 2026" },
-      { label: "Turkish Airlines", status: "Coming Soon", date: "Q4 2026" },
-      { label: "Virgin Atlantic", status: "Coming Soon", date: "Q1 2027" },
+      { label: "Airlines Partners", status: "Coming Soon", date: "Q3 2026" },
+      { label: "Regional Airlines", status: "In Negotiation", date: "Q3 2026" },
+      { label: "International Airlines", status: "Coming Soon", date: "Q4 2026" },
+      { label: "Budget Airlines", status: "Coming Soon", date: "Q1 2027" },
     ],
   },
   {
     name: "Hotels & Resorts",
     status: [
-  { label: "Accor Group", status: "In Negotiation", date: "Q3 2026" },
-      { label: "Marriott Bonvoy", status: "Coming Soon", date: "Q3 2026" },
-      { label: "Hyatt", status: "Coming Soon", date: "Q4 2026" },
-      { label: "Boutique Partners", status: "Open Enrollment", date: "Rolling" },
+      { label: "Hotel Chains", status: "In Negotiation", date: "Q3 2026" },
+      { label: "Luxury Hotels", status: "Coming Soon", date: "Q3 2026" },
+      { label: "Resort Partners", status: "Coming Soon", date: "Q4 2026" },
+      { label: "Boutique Hotels", status: "Open Enrollment", date: "Rolling" },
     ],
   },
   {
     name: "Travel Agencies",
     status: [
-      { label: "Expedia Collective", status: "Coming Soon", date: "Q1 2027" },
-      { label: "LastMinute.com", status: "In Discussion", date: "Q4 2026" },
+      { label: "Global Travel Agencies", status: "Coming Soon", date: "Q1 2027" },
+      { label: "Regional Travel Services", status: "In Discussion", date: "Q4 2026" },
     ],
   },
   {
@@ -55,10 +55,10 @@ const benefits = [
 ];
 
 const successStories = [
-  { company: "Hotel and Airways", quote: "HTTCoin lets us reward premium travelers in real-time.", owner: "VP Partnerships" },
+  { company: "Leading Airline Partner", quote: "HTTCoin lets us reward premium travelers in real-time.", owner: "VP Partnerships" },
   {
-    company: "LuxeStay Hotels",
-  quote: "We reduced payment friction for international guests with HTTC.",
+    company: "Luxury Hotel Group",
+    quote: "We reduced payment friction for international guests with HTTC.",
     owner: "Chief Commercial Officer",
   },
 ];

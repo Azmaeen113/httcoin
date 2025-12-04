@@ -48,9 +48,7 @@ const Roadmap = () => {
       status: "upcoming",
       progress: 0,
       milestones: [
-        "HTTCoin public sale",
-        "DEX listing (Raydium)",
-        "Liquidity locked",
+        "Liquidity burn",
         "Travel rewards pool activated",
         "Press releases + global marketing",
         "Exchange listings"

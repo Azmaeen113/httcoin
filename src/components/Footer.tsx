@@ -56,8 +56,9 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: MessageCircle, href: "https://t.me/httcoin1", label: "Telegram" },
-    { icon: Twitter, href: "https://twitter.com/httcoin1", label: "Twitter" },
+    { icon: MessageCircle, href: "https://t.me/+AeJTO0M8fRhmNWYx", label: "Telegram" },
+    { icon: MessageCircle, href: "https://t.me/httcoin1", label: "Telegram Announcements" },
+    { icon: Twitter, href: "https://x.com/httcoin1?s=21", label: "Twitter" },
     { icon: Instagram, href: "https://instagram.com/httcoin1", label: "Instagram" },
     { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61583661604184&sk=about", label: "Facebook" },
   ];

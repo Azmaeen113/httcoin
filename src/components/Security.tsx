@@ -11,7 +11,7 @@ const Security = () => {
   const { toast } = useToast();
   const { t } = useTranslation();
 
-  const contractAddress = "HTT...Coming December 1, 2025";
+  const contractAddress = "JAiHV54DDrRLKXHx5QeDzyo1nTffUB3GD8WYuuS13vaV";
 
   const securityFeatures = [
     {
@@ -152,7 +152,10 @@ const Security = () => {
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="outline" disabled>
+            <Button 
+              variant="outline" 
+              onClick={() => window.open('https://solscan.io/token/JAiHV54DDrRLKXHx5QeDzyo1nTffUB3GD8WYuuS13vaV', '_blank')}
+            >
               {t("security.viewOnSolscan")}
             </Button>
             <Button variant="outline" disabled>

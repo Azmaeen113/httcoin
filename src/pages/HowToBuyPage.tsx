@@ -82,10 +82,10 @@ const warnings = [
 ];
 
 const officialLinks = [
-  { label: "Official Contract", value: "3tCyxnbAuRhmzy8t84u53V2ffzPcF7hN77sZRdiKQI" },
+  { label: "Official Contract", value: "JAiHV54DDrRLKXHx5QeDzyo1nTffUB3GD8WYuuS13vaV" },
   { label: "Website", value: "httcoin.com" },
-  { label: "Telegram", value: "t.me/httcoin1" },
-  { label: "Twitter", value: "twitter.com/httcoin1" },
+  { label: "Telegram", value: "t.me/+AeJTO0M8fRhmNWYx" },
+  { label: "Twitter", value: "x.com/httcoin1?s=21" },
 ];
 
 const HowToBuyPage = () => {

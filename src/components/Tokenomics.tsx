@@ -10,11 +10,10 @@ const Tokenomics = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const distribution = [
-    { name: "Public Sale", value: 40, color: "#00f0ff" },
+    { name: "Liquidity", value: 45, color: "#ff4f81" },
     { name: "Travel Rewards", value: 20, color: "#ff9d00" },
     { name: "Team", value: 15, color: "#9d6bff" },
-    { name: "Marketing", value: 10, color: "#00ffa3" },
-    { name: "Liquidity", value: 10, color: "#ff4f81" },
+    { name: "Marketing", value: 15, color: "#00ffa3" },
     { name: "Partnerships", value: 5, color: "#ffc857" },
   ];
 
@@ -127,8 +126,8 @@ const Tokenomics = () => {
               <h4 className="text-xl font-bold">Key Highlights</h4>
               <ul className="space-y-3 text-sm text-muted-foreground">
                 <li className="flex items-start gap-2">
-                  <Users className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-foreground">Public Sale (40%):</strong> Fair launch for community participation</span>
+                  <Flame className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-foreground">Liquidity (45%):</strong> DEX pools and market stability</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Rocket className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -140,11 +139,7 @@ const Tokenomics = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <PieChartIcon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-foreground">Marketing (10%):</strong> Growth and partnerships</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Flame className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span><strong className="text-foreground">Liquidity (10%):</strong> DEX pools and stability</span>
+                  <span><strong className="text-foreground">Marketing (15%):</strong> Growth and partnerships</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Handshake className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />

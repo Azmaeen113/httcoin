@@ -22,7 +22,7 @@
       "partners": "Partners by 2027",
       "burn": "Pre-launch Burn"
     },
-  "badges": ["Liquidity Locked", "Audit Ready", "Flagship Travel Partner", "Powered by Solana"],
+  "badges": ["Liquidity Burn", "Audit Ready", "Travel Partner Network", "Powered by Solana"],
     "launch": "Launch",
     "launchDate": "Dec 1 · 2025"
   },
@@ -237,8 +237,8 @@
     "subtitle": "Your trust is our priority. HTTCoin is designed with industry-leading security measures.",
     "antiRug": "Anti-Rug Design",
     "antiRugDesc": "No minting after launch. Owner cannot change balances. Built for security from day one.",
-    "liquidityLocked": "Liquidity Locked",
-    "liquidityLockedDesc": "LP tokens locked permanently. Verified on Solana blockchain for complete transparency.",
+    "liquidityLocked": "Liquidity Burn",
+    "liquidityLockedDesc": "LP tokens burned permanently. Verified on Solana blockchain for complete transparency.",
     "auditReady": "Audit Ready",
     "auditReadyDesc": "Code audited by leading security firms. Security report will be publicly available.",
     "whitelistProtection": "Whitelist Protection",
@@ -254,7 +254,7 @@
     "viewAuditReport": "View Audit Report",
     "contractNote": "Contract and verification links will be available at launch",
     "badge1": "Audit Ready",
-    "badge2": "Liquidity Locked",
+    "badge2": "Liquidity Burn",
     "badge3": "Anti-Rug",
     "badge4": "Community First"
   },
@@ -297,7 +297,7 @@
     "utility5": "Exclusive partner perks",
     "utility6": "Merchant settlement",
     "securityTransparency": "Security & transparency",
-    "securityDetails": "Contract owner renounced · Minting disabled · Liquidity locked · Audit ready with third-party review.",
+    "securityDetails": "Contract owner renounced · Minting disabled · Liquidity burn · Audit ready with third-party review.",
     "comparison": "Comparison with other travel tokens",
     "metric": "Metric",
     "otherTravelTokens": "Other travel tokens",

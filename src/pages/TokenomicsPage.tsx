@@ -12,11 +12,10 @@ const TokenomicsPage = () => {
   const { t } = useTranslation();
   
   const distribution = [
-    { name: t("tokenomicsPage.publicSale"), value: 40, color: "#00f0ff" },
+    { name: t("tokenomicsPage.liquidity"), value: 45, color: "#ff4f81" },
     { name: t("tokenomicsPage.travelRewards"), value: 20, color: "#ff9d00" },
     { name: t("tokenomicsPage.team"), value: 15, color: "#9d6bff" },
-    { name: t("tokenomicsPage.marketing"), value: 10, color: "#00ffa3" },
-    { name: t("tokenomicsPage.liquidity"), value: 10, color: "#ff4f81" },
+    { name: t("tokenomicsPage.marketing"), value: 15, color: "#00ffa3" },
     { name: t("tokenomicsPage.partnerships"), value: 5, color: "#ffc857" },
   ];
 
