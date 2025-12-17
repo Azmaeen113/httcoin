@@ -59,7 +59,7 @@ const Community = () => {
       handle: "@httcoin1",
       members: "25,000+",
       color: "from-sky-400 to-blue-500",
-      link: "https://twitter.com/httcoin1"
+      link: "https://x.com/coin_httc"
     },
     {
       icon: Instagram,

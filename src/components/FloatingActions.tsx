@@ -50,7 +50,7 @@ const FloatingActions = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="https://twitter.com/httcoin1"
+          href="https://x.com/coin_httc"
           target="_blank"
           rel="noopener noreferrer"
           className="pointer-events-auto w-12 h-12 rounded-full bg-black text-white shadow-lg flex items-center justify-center"

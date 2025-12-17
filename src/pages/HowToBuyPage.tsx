@@ -85,7 +85,7 @@ const officialLinks = [
   { label: "Official Contract", value: "JAiHV54DDrRLKXHx5QeDzyo1nTffUB3GD8WYuuS13vaV" },
   { label: "Website", value: "httcoin.com" },
   { label: "Telegram", value: "t.me/+AeJTO0M8fRhmNWYx" },
-  { label: "Twitter", value: "x.com/httcoin1?s=21" },
+  { label: "Twitter", value: "x.com/coin_httc" },
 ];
 
 const HowToBuyPage = () => {
