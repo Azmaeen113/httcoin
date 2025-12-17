@@ -5,6 +5,7 @@ import { ArrowRight, Download } from "lucide-react";
 import ColourfulText from "@/components/ui/colourful-text";
 import solanaPhantomImage from "@/assets/gallery/qatar/Solana phantom.jpg";
 import { useBuyModal } from "@/context/BuyModalContext";
+import { useRef } from "react";
 
 const floatingDestinations = [
   { delay: 0, size: 80, x: "10%", y: "20%", color: "from-cyan-400/70 to-blue-500/30" },

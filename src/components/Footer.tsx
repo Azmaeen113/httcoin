@@ -109,11 +109,7 @@ const Footer = () => {
                   <Link
                     to={link.path}
                     onClick={(e) => {
-                      if (link.onClick) {
-                        link.onClick(e);
-                      } else {
-                        scrollToTop();
-                      }
+                      scrollToTop();
                     }}
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
